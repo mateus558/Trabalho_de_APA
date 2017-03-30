@@ -8,11 +8,11 @@
 
 #include "sorting.h"
 
-/**	bubble_sort - Implementation of the bubble sort algorithm
- *
- *	@param v is an c-like array.
- *	@param n is the size of the array v.
- *	@return there is no return.
+/**	bubble_sort - Implementation of the bubble sort    	  *	algorithm
+*
+*	@param v is an c-like array.
+*	@param n is the size of the array v.
+*	@return there is no return.
 */
 void bubble_sort(int v[], int n){
 	int i, j, min, pos_min;
