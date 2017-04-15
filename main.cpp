@@ -10,12 +10,12 @@ int main(){
 	int v[] = {6, 5, 4, 3, 2, 1, -1, -2, 0};
 	int i;
 	
-	/*cout << "original: ";
+	cout << "original: ";
 	for(i = 0; i < N; ++i) cout << v[i] << " ";
 	cout << endl;
 	bubble_sort(v, N);
 	cout << "ordenado: ";
 	for(i = 0; i < N; ++i) cout << v[i] << " ";
-	cout << endl;*/
+	cout << endl;
 
 }

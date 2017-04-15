@@ -7,14 +7,39 @@
 */
 
 #include "sorting.h"
+#include <iostream>
 
-/**	bubble_sort - Implementation of the bubble sort    	  *	algorithm
-*
-*	@param v is an c-like array.
-*	@param n is the size of the array v.
-*	@return there is no return.
+/*!	Implementation of the bubble sort algorithm
+
+	@param v is an c-like array.
+	@param n is the size of the array v.
+	@return there is no return.
 */
+
 void bubble_sort(int v[], int n){
+	int i, j, aux, swaps;
+	
+	for(i = 0; ; ++i){
+		swaps = 0;
+		for(j = 0; j < n-1; ++j){
+			if(v[j] > v[j + 1]){
+				aux = v[j + 1];
+				v[j + 1] = v[j];
+				v[j] = aux;
+				swaps++;
+			}
+		}
+		if(!swaps) return;
+	}
+}
+
+/*!	Implementation of the selection sort algorithm
+
+	@param v is an c-like array.
+	@param n is the size of the array v.
+	@return there is no return.
+*/
+void selection_sort(int v[], int n){
 	int i, j, min, pos_min;
 	
 	for(i = 0; i < n-1; i++){
@@ -29,11 +54,11 @@ void bubble_sort(int v[], int n){
 	}
 }	
 
-/** Implementation of the insertion sort algorithm.
-*
-*	@param v is an c-like array.
-*	@param n is the size of the array v.
-*	@return there is no return.
+/*! Implementation of the insertion sort algorithm.
+
+	@param v is an c-like array.
+	@param n is the size of the array v.
+	@return there is no return.
 */
 void insertion_sort(int v[], int n){
 	int i, j, x;
