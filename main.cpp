@@ -13,7 +13,7 @@ int main(){
 	cout << "original: ";
 	for(i = 0; i < N; ++i) cout << v[i] << " ";
 	cout << endl;
-	bubble_sort(v, N);
+	bubble_sort(v, 9);
 	cout << "ordenado: ";
 	for(i = 0; i < N; ++i) cout << v[i] << " ";
 	cout << endl;

@@ -8,6 +8,49 @@
 
 #include "sorting.h"
 #include <iostream>
+#include <stdlib.h>
+
+using namespace std;
+
+/*!
+	Swaps two elements in a vector.
+	
+	@param v is an c-like array.
+	@param a is the position of the first element to be swaped.
+	@param b is the position of the second element to be swaped.
+	@return there is no return.
+*/
+
+void swap(int v[], int a, int b){
+	int aux = v[a];
+	v[a] = v[b];
+	v[b] = aux;
+}
+
+/*!
+	Partition step of quick sort algorithm.
+	
+	@param v is an c-like array.
+	@param low is the lowest position of the subarray.
+	@param high is the highest position of the subarray.
+	@return the pivot of the subarray.
+*/
+
+int partition(int v[], int low, int high){
+  
+}
+
+/*!	Implementation of the quick sort algorithm
+
+	@param v is an c-like array.
+	@param low is the lowest position of the subarray.
+	@param high is the highest position of the subarray.
+	@return there is no return.
+*/
+
+void quick_sort(int v[], int low, int high){
+	
+}
 
 /*!	Implementation of the bubble sort algorithm
 
@@ -17,15 +60,13 @@
 */
 
 void bubble_sort(int v[], int n){
-	int i, j, aux, swaps;
+	int i, j, swaps;
 	
 	for(i = 0; ; ++i){
 		swaps = 0;
 		for(j = 0; j < n-1; ++j){
 			if(v[j] > v[j + 1]){
-				aux = v[j + 1];
-				v[j + 1] = v[j];
-				v[j] = aux;
+				swap(v, j + 1, j);
 				swaps++;
 			}
 		}
