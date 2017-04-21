@@ -36,15 +36,15 @@ void swap(Node v[], int a, int b){
 	@return the pivot's position of the subarray.
 */
 
-int partition(int v[], int low, int high){
-	int pivot, i, j;
-	pivot = v[low];
+int partition(Node v[], int low, int high){
+	int i, j;
+	Node pivot = v[low];
 	i = low;
 	j = high;
 	while(i < j){
-		while(v[i] <=pivot)
+		while(v[i].key <=pivot.key)
 		i++;
-		while(v[j]>pivot)
+		while(v[j].key>pivot.key)
 		j--;
 		if(i<j)
 		swap(v, i, j);
@@ -64,7 +64,7 @@ int partition(int v[], int low, int high){
 	@return there is no return.
 */
 
-void quick_sort(int v[], int low, int high){
+void quick_sort(Node v[], int low, int high){
 	if(low<high){
 		int pivot = partition(v, low, high);
 		quick_sort(v, low, (pivot-1));
@@ -78,14 +78,14 @@ void quick_sort(int v[], int low, int high){
 	@param n is the size of the array v.
 	@return there is no return.
 */
-
+/*
 void merge_sort(int v[], int n)
 {
 	mergePart(v, 0, n / 2 - 1);
 	mergePart(v, n / 2, n - 1);
 	mergeJoin(v, 0, n - 1);
 }
-
+*/
 /*!
 	Partition step of merge sort algorithm.
 
@@ -94,7 +94,7 @@ void merge_sort(int v[], int n)
 	@param b is the highest position of the subarray.
 	@return there is no return.
 */
-
+/*
 void mergePart(int v[], int a, int b)
 {
 	if (b - a > 1)
@@ -106,7 +106,7 @@ void mergePart(int v[], int a, int b)
 	else if (v[a] > v[b])
 		swap(v, a, b);
 }
-
+*/
 /*!
 	Merge step of merge sort algorithm.
 
@@ -115,7 +115,7 @@ void mergePart(int v[], int a, int b)
 	@param b is the highest position of the subarray.
 	@return there is no return.
 */
-
+/*
 void mergeJoin(int v[], int a, int b)
 {
 	int i = a + (b - a + 1) / 2;
@@ -127,13 +127,13 @@ void mergeJoin(int v[], int a, int b)
 		int j = i;
 		while (j < b && v[j] > v[j + 1])
 		{
-			swap(v, j, j + 1);
+			swap(v, j, (j + 1);
 			j++;
 		}
 		a++;
 	}
 }
-
+*/
 /*!	Implementation of the bubble sort algorithm
 
 	@param v is an c-like array.
