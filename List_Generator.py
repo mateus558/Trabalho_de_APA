@@ -25,13 +25,24 @@ def generateList(n):
     for i in range(n-1, -1, -1):
         ListDOrd.write(str(i) + '\n')
         ListDOrd.write(fullName[i] + '\n')
+    #almost ordered list
+    ListAmOrd.write(str(n-1) + '\n')
+    ListAmOrd.write(fullName[n-1] + '\n')
+    for i in range(1, n-1):
+        ListAmOrd.write(str(i) + '\n')
+        ListAmOrd.write(fullName[i] + '\n')
+    ListAmOrd.write(str(0) + '\n')
+    ListAmOrd.write(fullName[0] + '\n')
+
 
 #main
 n = input("What is the size of the list?\n")
 ListRO = open('ListRO{}.txt'.format(n), 'w') #list in random order
 ListAOrd = open('ListAOrd{}.txt'.format(n), 'w') #list in ascending order
-ListDOrd = open('ListDOrd{}.txt'.format(n), 'w')#List in descending order
+ListDOrd = open('ListDOrd{}.txt'.format(n), 'w') #List in descending order
+ListAmOrd = open('ListAmOrd{}.txt'.format(n), 'w') #almost ordered list
 generateList(n)
 ListRO.close()
 ListAOrd.close()
 ListDOrd.close()
+ListAmOrd.close()
