@@ -1,9 +1,11 @@
 #ifndef SORTING_H_INCLUDED
 #define SORTING_H_INCLUDED
 
+#include <string>
+
 struct Node{
 	int key;
-	char* info;
+	std::string info;
 };
 
 void swap(int v[], int a, int b);
