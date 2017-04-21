@@ -47,7 +47,7 @@ int partition(Node v[], int low, int high){
 		while(v[j].key>pivot.key)
 		j--;
 		if(i<j)
-		swap(v, i, j);
+	 	swap(v, i, j);
 
 	}
 	v[low] = v[j];
@@ -79,12 +79,12 @@ void quick_sort(Node v[], int low, int high){
 	@return there is no return.
 */
 
-void merge_sort(int v[], int n)
+/*void merge_sort(int v[], int n)
 {
 	mergePart(v, 0, n / 2 - 1);
 	mergePart(v, n / 2, n - 1);
 	mergeJoin(v, 0, n - 1);
-}
+}*/
 
 /*!
 	Partition step of merge sort algorithm.
@@ -95,7 +95,7 @@ void merge_sort(int v[], int n)
 	@return there is no return.
 */
 
-void mergePart(int v[], int a, int b)
+/*void mergePart(int v[], int a, int b)
 {
 	if (b - a > 1)
 	{
@@ -105,7 +105,7 @@ void mergePart(int v[], int a, int b)
 	}
 	else if (v[a] > v[b])
 		swap(v, a, b);
-}
+}*/
 
 /*!
 	Merge step of merge sort algorithm.
@@ -116,7 +116,7 @@ void mergePart(int v[], int a, int b)
 	@return there is no return.
 */
 
-void mergeJoin(int v[], int a, int b)
+/*void mergeJoin(int v[], int a, int b)
 {
 	int i = a + (b - a + 1) / 2;
 	int n = i;
@@ -127,12 +127,12 @@ void mergeJoin(int v[], int a, int b)
 		int j = i;
 		while (j < b && v[j] > v[j + 1])
 		{
-			swap(v, j, (j + 1);
+		swap(v, j, (j + 1));
 			j++;
 		}
 		a++;
 	}
-}
+}*/
 
 /*!	Implementation of the bubble sort algorithm
 
