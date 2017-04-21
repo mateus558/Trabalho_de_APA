@@ -78,14 +78,14 @@ void quick_sort(Node v[], int low, int high){
 	@param n is the size of the array v.
 	@return there is no return.
 */
-/*
+
 void merge_sort(int v[], int n)
 {
 	mergePart(v, 0, n / 2 - 1);
 	mergePart(v, n / 2, n - 1);
 	mergeJoin(v, 0, n - 1);
 }
-*/
+
 /*!
 	Partition step of merge sort algorithm.
 
@@ -94,7 +94,7 @@ void merge_sort(int v[], int n)
 	@param b is the highest position of the subarray.
 	@return there is no return.
 */
-/*
+
 void mergePart(int v[], int a, int b)
 {
 	if (b - a > 1)
@@ -106,7 +106,7 @@ void mergePart(int v[], int a, int b)
 	else if (v[a] > v[b])
 		swap(v, a, b);
 }
-*/
+
 /*!
 	Merge step of merge sort algorithm.
 
@@ -115,7 +115,7 @@ void mergePart(int v[], int a, int b)
 	@param b is the highest position of the subarray.
 	@return there is no return.
 */
-/*
+
 void mergeJoin(int v[], int a, int b)
 {
 	int i = a + (b - a + 1) / 2;
@@ -133,7 +133,7 @@ void mergeJoin(int v[], int a, int b)
 		a++;
 	}
 }
-*/
+
 /*!	Implementation of the bubble sort algorithm
 
 	@param v is an c-like array.
