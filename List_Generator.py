@@ -7,15 +7,16 @@ def randomName():
 
 def generateList(n):
     fullName = []
+    listIndex = []
     for i in range (0, n):
         fullName.append(randomName())
-    #list without repeated elements
-    for i in range (0,n-1,2):
-        ListNoR.write(str(i) + '\n')
-        ListNoR.write(fullName[i] + '\n')
-    for i in range(n-1, 0, -2):
-        ListNoR.write(str(i) + '\n')
-        ListNoR.write(fullName[i] + '\n')
+        listIndex.append(i)
+    #list in random order
+    for i in range (0,n):
+        randIndex = randint(0,len(listIndex)-1)
+        ListRO.write(str(listIndex[randIndex]) + '\n')
+        ListRO.write(fullName[listIndex[randIndex]] + '\n')
+        listIndex.pop(randIndex)
     #list in ascending order
     for i in range(0, n):
         ListAOrd.write(str(i) + '\n')
@@ -26,10 +27,10 @@ def generateList(n):
         ListDOrd.write(fullName[i] + '\n')
 
 #main
-ListNoR = open('ListNoR.txt', 'w') #list without repeated elements
-ListAOrd = open('ListAOrd.txt', 'w') #list in ascending order
-ListDOrd = open('ListDOrd.txt', 'w')#List in descending order
 n = input("What is the size of the list?\n")
+ListRO = open('ListRO{}.txt'.format(n), 'w') #list in random order
+ListAOrd = open('ListAOrd{}.txt'.format(n), 'w') #list in ascending order
+ListDOrd = open('ListDOrd{}.txt'.format(n), 'w')#List in descending order
 generateList(n)
 ListNoR.close()
 ListAOrd.close()
