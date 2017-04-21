@@ -3,7 +3,7 @@
 
 struct Node{
 	int key;
-	char* info;
+	string info;
 };
 
 void swap(int v[], int a, int b);
