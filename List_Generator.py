@@ -17,7 +17,7 @@ def generateList(n):
         ListNoR.write(str(i) + '\n')
         ListNoR.write(fullName[i] + '\n')
     #list in ascending order
-    for k in range(0, n):
+    for i in range(0, n):
         ListAOrd.write(str(i) + '\n')
         ListAOrd.write(fullName[i] + '\n')
     #list in descending order
