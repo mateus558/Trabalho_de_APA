@@ -21,8 +21,8 @@ using namespace std;
 	@return there is no return.
 */
 
-void swap(int v[], int a, int b){
-	int aux = v[a];
+void swap(Node v[], int a, int b){
+	Node aux = v[a];
 	v[a] = v[b];
 	v[b] = aux;
 }
@@ -141,13 +141,13 @@ void mergeJoin(int v[], int a, int b)
 	@return there is no return.
 */
 
-void bubble_sort(int v[], int n){
+void bubble_sort(Node v[], int n){
 	int i, j, swaps;
 
 	for(i = 0; ; ++i){
 		swaps = 0;
 		for(j = 0; j < n-1; ++j){
-			if(v[j] > v[j + 1]){
+			if(v[j].key > v[j + 1].key){
 				swap(v, j + 1, j);
 				swaps++;
 			}
@@ -162,18 +162,18 @@ void bubble_sort(int v[], int n){
 	@param n is the size of the array v.
 	@return there is no return.
 */
-void selection_sort(int v[], int n){
+void selection_sort(Node v[], int n){
 	int i, j, min, pos_min;
 
 	for(i = 0; i < n-1; i++){
-		for(j = i + 1, min = v[i], pos_min = i; j < n; j++){
-			if(v[j] < min){
-				min = v[j];
+		for(j = i + 1, min = v[i].key, pos_min = i; j < n; j++){
+			if(v[j].key < min){
+				min = v[j].key;
 				pos_min = j;
 			}
 		}
 		v[pos_min] = v[i];
-		v[i] = min;
+		v[i].key = min;
 	}
 }
 
@@ -183,15 +183,15 @@ void selection_sort(int v[], int n){
 	@param n is the size of the array v.
 	@return there is no return.
 */
-void insertion_sort(int v[], int n){
+void insertion_sort(Node v[], int n){
 	int i, j, x;
 
 	for(i = 1; i < n; i++){
-		x = v[i];
+		x = v[i].key;
 
-		for(j = i - 1; j >= 0 && v[j] > x; --j){
+		for(j = i - 1; j >= 0 && v[j].key > x; --j){
 			v[j + 1] = v[j];
-			v[j] = x;
+			v[j].key = x;
 		}
 	}
 }
