@@ -18,7 +18,7 @@ int main(){
 	cout << "ordenado: ";
 	for(i = 0; i < N; ++i) cout << v[i] << " ";
 	cout << endl;*/
-	quick_sort(v,0, 9);
+	merge_sort(v, 9);
 	cout << "quick_sort" << endl;
 	for(i = 0; i< 9; i++) cout << v[i] << " ";
 	cout << endl;

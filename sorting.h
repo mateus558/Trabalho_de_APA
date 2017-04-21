@@ -1,6 +1,11 @@
 #ifndef SORTING_H_INCLUDED
 #define SORTING_H_INCLUDED
 
+struct Node{
+	int key;
+	char* info;
+};
+
 void swap(int v[], int a, int b);
 void mergePart(int v[], int a, int b);
 void mergeJoin(int v[], int a, int b);
