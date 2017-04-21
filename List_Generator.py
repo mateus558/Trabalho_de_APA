@@ -32,6 +32,6 @@ ListRO = open('ListRO{}.txt'.format(n), 'w') #list in random order
 ListAOrd = open('ListAOrd{}.txt'.format(n), 'w') #list in ascending order
 ListDOrd = open('ListDOrd{}.txt'.format(n), 'w')#List in descending order
 generateList(n)
-ListNoR.close()
+ListRO.close()
 ListAOrd.close()
 ListDOrd.close()
