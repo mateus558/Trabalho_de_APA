@@ -62,8 +62,8 @@ int main(int argc, char * argv[]){
 		cout << "\nSorted: " << endl;
 		print_nodes(v2, n);
 		cout << endl;
-		cout << "Time wasted: " << timeWasted*1000  << "ms."<< endl;
 	}
-	cout << comp << endl;
-	cout << atrib << endl;
+	cout << "Number of comparisons: " << comp << endl;
+	cout << "Number of attributions: " << atrib << endl;
+	cout << "Time wasted: " << timeWasted  << "s."<< endl;
 }
