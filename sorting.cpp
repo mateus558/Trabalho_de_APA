@@ -1,8 +1,11 @@
 /**
 *  Sorting algorithms, sorting.cpp
-* Purpose: Implement algorithms to sort arrays of integers
+* Purpose: Implement algorithms to sort arrays of integers.
 *
-* @author Mateus Coutinho Marim
+* @author Mateus Coutinho Marim	(mateus.marim@ice.ufjf.br)
+* @author Matheus Soares
+* @author Rafael Souza
+* @author Aleksander Yacovenco
 * @version 1.0 23/03/17
 */
 
@@ -44,11 +47,11 @@ int partition(Node v[], int low, int high){
 	j = high;
 	while(i < j){
 		while(v[i].key <=pivot.key)
-		i++;
+			i++;
 		while(v[j].key >pivot.key)
-		j--;
+			j--;
 		if(i<j)
-		swap(v, i, j);
+	 	swap(v, i, j);
 
 	}
 	v[low] = v[j];
@@ -128,7 +131,7 @@ void mergeJoin(Node v[], int a, int b)
 		j = i;
 		while (j < b && v[j].key > v[j + 1].key)
 		{
-			swap(v, j, j + 1);
+			swap(v, j, (j + 1));
 			j++;
 		}
 		a++;
