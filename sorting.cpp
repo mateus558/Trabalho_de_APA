@@ -31,6 +31,7 @@ void swap(Node v[], int a, int b){
 	Node aux = v[a];
 	v[a] = v[b];
 	v[b] = aux;
+	atrib += 3;
 }
 
 /*!
@@ -63,7 +64,6 @@ int partition(Node v[], int low, int high){
 		if(i<j){
 	 		comp++;
 	 		swap(v, i, j);
-	 		atrib += 3;
 	 	}
 
 	}
@@ -120,12 +120,15 @@ void mergePart(Node v[], int a, int b)
 {
 	if (b - a > 1)
 	{
+		comp++;
 		mergePart(v, a, a + (b - a) / 2 - 1);
 		mergePart(v, a + (b - a) / 2, b);
 		mergeJoin(v, a, b);
 	}
-	else if (v[a].key > v[b].key)
+	else if (v[a].key > v[b].key){
 		swap(v, a, b);
+		comp++;
+	}
 }
 
 /*!
@@ -141,17 +144,24 @@ void mergeJoin(Node v[], int a, int b)
 {
 	int i = a + (b - a + 1) / 2;
 	int n = i, j;
+	atrib += 2;
 	while (a < n)
 	{
-		if (v[a].key > v[i].key)
+		if (v[a].key > v[i].key){
+			comp++;
 			swap(v, a, i);
+		}
 		j = i;
 		while (j < b && v[j].key > v[j + 1].key)
 		{
+			comp += 2;
+			atrib++;
 			swap(v, j, (j + 1));
 			j++;
 		}
 		a++;
+		comp++;
+		atrib += 2;
 	}
 }
 
@@ -167,12 +177,16 @@ void bubble_sort(Node v[], int n){
 
 	for(i = 0; ; ++i){
 		swaps = 0;
-		for(j = 0; j < n-1; ++j){
+		for(j = 0; j < n-1; ++j){			
 			if(v[j].key > v[j + 1].key){
+				comp++;
 				swap(v, j + 1, j);
 				swaps++;
 			}
+			comp++;
+			atrib++;
 		}
+		atrib++;
 		if(!swaps) return;
 	}
 }
@@ -188,13 +202,19 @@ void selection_sort(Node v[], int n){
 
 	for(i = 0; i < n-1; i++){
 		for(j = i + 1, min = v[i].key, pos_min = i; j < n; j++){
+			atrib++;
+			comp++;
 			if(v[j].key < min){
+				comp++;
 				min = v[j].key;
 				pos_min = j;
+				atrib += 2;
 			}
 		}
 		v[pos_min] = v[i];
 		v[i].key = min;
+		atrib += 5;
+		comp++;
 	}
 }
 
@@ -209,10 +229,14 @@ void insertion_sort(Node v[], int n){
 
 	for(i = 1; i < n; i++){
 		x = v[i].key;
-
+		atrib += 2;
+		comp++;
+		
 		for(j = i - 1; j >= 0 && v[j].key > x; --j){
 			v[j + 1] = v[j];
 			v[j].key = x;
+			atrib += 3;
+			comp += 2;
 		}
 	}
 }
