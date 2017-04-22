@@ -314,13 +314,13 @@ void heap_sort(Node a[], int n) /// recebe um vetor desordenado e aplica o heaps
 	
     build_max_heap(a,n);
   
-    for (i = n; i >= 1; i--)
+    for (i = n; i >= 2; i--)
     {
 		comp++;	
         atrib += 3;
         temp = a[i].key;
-        a[i].key = a[1].key;
-        a[1].key = temp;
-        max_heapify(a, 1, i - 1);
+        a[i].key = a[0].key;
+        a[0].key = temp;
+        max_heapify(a, 0, i - 1);
     }
 }
