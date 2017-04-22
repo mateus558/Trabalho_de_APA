@@ -3,7 +3,7 @@
 * Purpose: Implement algorithms to sort arrays of integers.
 *
 * @author Mateus Coutinho Marim	(mateus.marim@ice.ufjf.br)
-* @author Matheus Soares
+* @author Mattheus Soares Santos
 * @author Rafael Souza
 * @author Aleksander Yacovenco
 * @version 1.0 23/03/17
@@ -239,4 +239,72 @@ void insertion_sort(Node v[], int n){
 			comp += 2;
 		}
 	}
+}
+
+
+
+/*! Implementation of the heapsort algorithm.
+
+	@param a is an c-like array.
+	@param n is the size of the array v.
+	@return there is no return.
+*/
+
+
+
+void MAX_HEAPIFY(Node a[], int i, int n) /// transforma o vetor que receber em um maxheap
+{
+    int l,r,largest,loc;
+    l=2*i;
+    atrib++;
+    r=(2*i+1);
+    atrib++;
+    if((l<=n)&&a[l].key>a[i].key)
+        comp++;
+	largest=l;
+	atrib++;
+    else
+	comp++;
+        largest=i;
+	atrib++;
+    if((r<=n)&&(a[r].key>a[largest].key))
+	comp++;    
+        largest=r;
+	atrib++;
+    if(largest!=i)
+    {
+	comp++;    
+        loc=a[i].key;
+	atrib++;
+        a[i].key=a[largest].key;
+	atrib++;    
+        a[largest].key=loc;
+	atrib++;    
+        MAX_HEAPIFY(a, largest,n);
+    }
+}
+void BUILD_MAX_HEAP(Node a[], int n) /// cria um maxheap
+{
+    for(int k = n/2; k >= 1; k--)
+    {
+	comp++;
+        MAX_HEAPIFY(a, k, n);
+    }
+}
+void HEAPSORT(Node a[], int n) /// recebe um vetor desordenado e aplica o heapsort nele
+{
+
+    BUILD_MAX_HEAP(a,n);
+    int i, temp;
+    for (i = n; i >= 2; i--)
+    {
+	comp++;
+        temp = a[i].key;
+	atrib++;    
+        a[i].key = a[1].key;
+	atrib++    
+        a[1].key = temp;
+	atrib++    
+        MAX_HEAPIFY(a, 1, i - 1);
+    }
 }
