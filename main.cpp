@@ -53,7 +53,7 @@ int main(int argc, char * argv[]){
 			break;
 		case HEAP:
 			cout << "Heap sort." << endl;
-			heap_sort(v2, n);
+			heap_sort(v2, n+1);
 			break;
 	}		
 	timeEnd = clock();
