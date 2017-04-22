@@ -18,6 +18,9 @@ void swap(Node v[], int a, int b);
 void mergePart(Node v[], int a, int b);
 void mergeJoin(Node v[], int a, int b);
 int partition(Node v[], int low, int high);
+void max_heapify(Node a[], int i, int n);
+void build_max_heap(Node a[], int n);
+void heap_sort(Node a[], int n);
 
 /*!
 	Sorting main functions.

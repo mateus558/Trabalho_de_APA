@@ -243,68 +243,84 @@ void insertion_sort(Node v[], int n){
 
 
 
-/*! Implementation of the heapsort algorithm.
+/*! Max heapify algorithm.
+	
+	Rearrange a heap to maintain the heap property.
 
 	@param a is an c-like array.
 	@param n is the size of the array v.
 	@return there is no return.
 */
-
-
-
-void MAX_HEAPIFY(Node a[], int i, int n) /// transforma o vetor que receber em um maxheap
+void max_heapify(Node a[], int i, int n) /// transforma o vetor que receber em um maxheap
 {
     int l,r,largest,loc;
     l=2*i;
-    atrib++;
     r=(2*i+1);
-    atrib++;
-    if((l<=n)&&a[l].key>a[i].key)
+
+    if((l<=n)&&a[l].key>a[i].key){
         comp++;
-	largest=l;
-	atrib++;
-    else
-	comp++;
+		largest=l;
+		atrib++;
+    }else{
+		comp++;
         largest=i;
-	atrib++;
-    if((r<=n)&&(a[r].key>a[largest].key))
-	comp++;    
+    	atrib++;
+    }
+	
+    if((r<=n)&&(a[r].key>a[largest].key)){
+		comp++;    
         largest=r;
-	atrib++;
+    }
+
     if(largest!=i)
     {
-	comp++;    
+		comp++; 
+		atrib += 3;   
         loc=a[i].key;
-	atrib++;
         a[i].key=a[largest].key;
-	atrib++;    
         a[largest].key=loc;
-	atrib++;    
-        MAX_HEAPIFY(a, largest,n);
+        max_heapify(a, largest,n);
     }
+    atrib += 3;
 }
-void BUILD_MAX_HEAP(Node a[], int n) /// cria um maxheap
+
+/*! Build max heap algorithm.
+
+	Transform an array into a max heap.
+	
+	@param a is an c-like array.
+	@param n is the size of the array v.
+	@return there is no return.
+*/
+void build_max_heap(Node a[], int n) /// cria um maxheap
 {
     for(int k = n/2; k >= 1; k--)
     {
-	comp++;
-        MAX_HEAPIFY(a, k, n);
+		comp++;
+        max_heapify(a, k, n);
     }
 }
-void HEAPSORT(Node a[], int n) /// recebe um vetor desordenado e aplica o heapsort nele
-{
 
-    BUILD_MAX_HEAP(a,n);
-    int i, temp;
+/*!	Heap sort algorithm implementation.
+	
+	@param a is an c-like array.
+	@param n is the size of the array v.
+	@return there is no return.
+*/
+
+void heap_sort(Node a[], int n) /// recebe um vetor desordenado e aplica o heapsort nele
+{
+	int i, temp;
+	
+    build_max_heap(a,n);
+  
     for (i = n; i >= 2; i--)
     {
-	comp++;
+		comp++;	
+        atrib += 3;
         temp = a[i].key;
-	atrib++;    
         a[i].key = a[1].key;
-	atrib++    
         a[1].key = temp;
-	atrib++    
-        MAX_HEAPIFY(a, 1, i - 1);
+        max_heapify(a, 1, i - 1);
     }
 }
