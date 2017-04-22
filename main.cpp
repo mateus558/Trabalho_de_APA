@@ -1,15 +1,18 @@
 #include <iostream>
+#include <time.h>
 #include "search.h"
 #include "utils.h"
 #include "sorting.h"
-
 #define N 5
 
 enum Sort {BUBBLE = 0, SELECTION = 1, INSERTION = 2, MERGE = 3, QUICK = 4, HEAP = 5};
 
 using namespace std;
 
-int main(int argc, char *argv[]){
+
+int main(int argc, char * argv[]){
+	clock_t timeBeginning, timeEnd;
+	double timeWasted = 0.0;
 	Node *v2 = NULL;
 	string path(argv[1]);
 	int n, o;
@@ -56,5 +59,7 @@ int main(int argc, char *argv[]){
 		cout << "\nSorted: " << endl;
 		print_nodes(v2, n);
 		cout << endl;
+		timeWasted =((timeEnd-timeBeginning)/(double)CLOCKS_PER_SEC);
+		cout << "Time wasted: " << timeWasted*1000  << "ms."<< endl;
 	}
 }
