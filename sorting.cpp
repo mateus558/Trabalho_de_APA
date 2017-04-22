@@ -314,7 +314,7 @@ void heap_sort(Node a[], int n) /// recebe um vetor desordenado e aplica o heaps
 	
     build_max_heap(a,n);
   
-    for (i = n; i >= 2; i--)
+    for (i = n; i >= 1; i--)
     {
 		comp++;	
         atrib += 3;
