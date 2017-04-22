@@ -20,7 +20,6 @@ void mergeJoin(Node v[], int a, int b);
 int partition(Node v[], int low, int high);
 void max_heapify(Node a[], int i, int n);
 void build_max_heap(Node a[], int n);
-void heap_sort(Node a[], int n);
 
 /*!
 	Sorting main functions.
@@ -30,5 +29,6 @@ void selection_sort(Node v[], int n);
 void insertion_sort(Node v[], int n);
 void merge_sort(Node v[], int n);
 void quick_sort(Node v[], int low, int high);
+void heap_sort(Node a[], int n);
 
 #endif

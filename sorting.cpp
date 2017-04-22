@@ -253,35 +253,27 @@ void insertion_sort(Node v[], int n){
 */
 void max_heapify(Node a[], int i, int n) /// transforma o vetor que receber em um maxheap
 {
-    int l,r,largest,loc;
-    l=2*i;
-    r=(2*i+1);
+    int largest = i;  // Initialize largest as root
+    int l = 2*i + 1;  // left = 2*i + 1
+    int r = 2*i + 2;  // right = 2*i + 2
 
-    if((l<=n)&&a[l].key>a[i].key){
-        comp++;
-		largest=l;
-		atrib++;
-    }else{
-		comp++;
-        largest=i;
-    	atrib++;
-    }
-	
-    if((r<=n)&&(a[r].key>a[largest].key)){
-		comp++;    
-        largest=r;
-    }
+    // If left child is larger than root
+    if (l < n && a[l].key > a[largest].key)
+        largest = l;
 
-    if(largest!=i)
+    // If right child is larger than largest so far
+    if (r < n && a[r].key > a[largest].key)
+        largest = r;
+
+    // If largest is not root
+    if (largest != i)
     {
-		comp++; 
-		atrib += 3;   
-        loc=a[i].key;
-        a[i].key=a[largest].key;
-        a[largest].key=loc;
-        max_heapify(a, largest,n);
+        swap(a, i, largest);
+
+        // Recursively heapify the affected sub-tree
+        max_heapify(a, largest, n);
     }
-    atrib += 3;
+    return;
 }
 
 /*! Build max heap algorithm.
@@ -294,10 +286,10 @@ void max_heapify(Node a[], int i, int n) /// transforma o vetor que receber em u
 */
 void build_max_heap(Node a[], int n) /// cria um maxheap
 {
-    for(int k = n/2; k >= 1; k--)
+    int i;
+    for(i = n/2; i >= 1; i--)
     {
-		comp++;
-        max_heapify(a, k, n);
+        max_heapify(a, i, n);
     }
 }
 
@@ -310,17 +302,17 @@ void build_max_heap(Node a[], int n) /// cria um maxheap
 
 void heap_sort(Node a[], int n) /// recebe um vetor desordenado e aplica o heapsort nele
 {
-	int i, temp;
-	
-    build_max_heap(a,n);
-  
-    for (i = n; i >= 2; i--)
+	// Build heap (rearrange array)
+    for (int i = n / 2 - 1; i >= 0; i--)
+        max_heapify(a, i, n);
+
+    // One by one extract an element from heap
+    for (int i=n-1; i>=0; i--)
     {
-		comp++;	
-        atrib += 3;
-        temp = a[i].key;
-        a[i].key = a[1].key;
-        a[1].key = temp;
-        max_heapify(a, 1, i - 1);
+        // Move current root to end
+        swap(a, 0, i);
+
+        // call max heapify on the reduced heap
+        max_heapify(a, 0, i);
     }
 }
