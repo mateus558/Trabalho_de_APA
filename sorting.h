@@ -3,6 +3,9 @@
 
 #include <string>
 
+extern int comp;
+extern int atrib;
+
 struct Node{
 	int key;
 	std::string info;

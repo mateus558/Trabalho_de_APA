@@ -28,7 +28,8 @@ int main(int argc, char * argv[]){
 	
 	cout << "\nSize: " << n << endl;
 	cout << endl;
-		
+	
+	timeBeginning = clock();
 	switch(o){
 		case BUBBLE:
 			cout << "Bubble sort." << endl;
@@ -53,13 +54,16 @@ int main(int argc, char * argv[]){
 		case HEAP:
 			cout << "Heap sort." << endl;
 			break;
-	}
+	}		
+	timeEnd = clock();
+	timeWasted = double(timeEnd - timeBeginning) / CLOCKS_PER_SEC;
 	
 	if(n <= 100){
 		cout << "\nSorted: " << endl;
 		print_nodes(v2, n);
 		cout << endl;
-		timeWasted =((timeEnd-timeBeginning)/(double)CLOCKS_PER_SEC);
 		cout << "Time wasted: " << timeWasted*1000  << "ms."<< endl;
 	}
+	cout << comp << endl;
+	cout << atrib << endl;
 }

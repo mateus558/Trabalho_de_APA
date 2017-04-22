@@ -13,6 +13,9 @@
 #include <iostream>
 #include <stdlib.h>
 
+int comp = 0;	//Number of comparisons
+int atrib = 0;	//Number of attributions
+
 using namespace std;
 
 /*!
@@ -46,16 +49,27 @@ int partition(Node v[], int low, int high){
 	i = low;
 	j = high;
 	while(i < j){
-		while(v[i].key <=pivot.key)
+		comp++;
+		while(v[i].key <=pivot.key){
+			comp++;
+			atrib++;
 			i++;
-		while(v[j].key >pivot.key)
+		}
+		while(v[j].key >pivot.key){
+			comp++;
+			atrib++;
 			j--;
-		if(i<j)
-	 	swap(v, i, j);
+		}
+		if(i<j){
+	 		comp++;
+	 		swap(v, i, j);
+	 		atrib += 3;
+	 	}
 
 	}
 	v[low] = v[j];
 	v[j] = pivot;
+	atrib += 5;
 	return j;
 }
 
@@ -70,10 +84,13 @@ int partition(Node v[], int low, int high){
 
 void quick_sort(Node v[], int low, int high){
 	if(low<high){
+		comp++;
+		atrib++;
 		int pivot = partition(v, low, high);
 		quick_sort(v, low, (pivot-1));
 		quick_sort(v, (pivot+1), high);
 	}
+	
 }
 
 /*!	Implementation of the merge sort algorithm
