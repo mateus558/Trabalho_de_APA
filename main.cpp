@@ -5,28 +5,56 @@
 
 #define N 5
 
+enum Sort {BUBBLE = 0, SELECTION = 1, INSERTION = 2, MERGE = 3, QUICK = 4, HEAP = 5};
+
 using namespace std;
 
-int main(){
+int main(int argc, char *argv[]){
 	Node *v2 = NULL;
-	string path("ListNoR.txt");
-	int v[] = {6, 5, 4, 3, 2, 1, -1, -2, 0};
-	int v1[] = {3,1,2, -1};
-	int i, n;
+	string path(argv[1]);
+	int n, o;
 	
+	o = atoi(argv[2]);
 	n = load_list(path, &v2);
-	cout << v2[0].info << endl;
-	if(!v2) cout << "cu" << endl;
-	cout << "original: ";
-	print_nodes(v2, n);
-	cout << endl;
-	/*bubble_sort(v, 9);
-	cout << "ordenado: ";
-	for(i = 0; i < N; ++i) cout << v[i] << " ";
-	cout << endl;*/
-	bubble_sort(v2, n);
-	cout << "quick_sort" << endl;
-	print_nodes(v2, n);
-	cout << endl;
 
+	if(n <= 100){
+		cout << "original: ";
+		print_nodes(v2, n);
+		cout << endl;
+	}
+	
+	cout << "\nSize: " << n << endl;
+	cout << endl;
+		
+	switch(o){
+		case BUBBLE:
+			cout << "Bubble sort." << endl;
+			bubble_sort(v2, n);
+			break;
+		case SELECTION:
+			cout << "Selection sort." << endl;
+			selection_sort(v2, n);
+			break;
+		case INSERTION:
+			cout << "Insertion sort." << endl;
+			insertion_sort(v2, n);
+			break;
+		case MERGE:
+			cout << "Merge sort." << endl;
+			merge_sort(v2, n);
+			break;
+		case QUICK:
+			cout << "Quick sort." << endl;
+			quick_sort(v2, 0, n);
+			break;
+		case HEAP:
+			cout << "Heap sort." << endl;
+			break;
+	}
+	
+	if(n <= 100){
+		cout << "\nSorted: " << endl;
+		print_nodes(v2, n);
+		cout << endl;
+	}
 }

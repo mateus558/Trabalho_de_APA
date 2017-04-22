@@ -12,9 +12,9 @@ struct Node{
 	Sorting sub functions.
 */
 void swap(Node v[], int a, int b);
-void mergePart(int v[], int a, int b);
-void mergeJoin(int v[], int a, int b);
-int partition(int v[], int low, int high);
+void mergePart(Node v[], int a, int b);
+void mergeJoin(Node v[], int a, int b);
+int partition(Node v[], int low, int high);
 
 /*!
 	Sorting main functions.
@@ -22,7 +22,7 @@ int partition(int v[], int low, int high);
 void bubble_sort(Node v[], int n);
 void selection_sort(Node v[], int n);
 void insertion_sort(Node v[], int n);
-void merge_sort(int v[], int n);
-void quick_sort(int v[], int low, int high);
+void merge_sort(Node v[], int n);
+void quick_sort(Node v[], int low, int high);
 
 #endif

@@ -36,15 +36,16 @@ void swap(Node v[], int a, int b){
 	@return the pivot's position of the subarray.
 */
 
-int partition(int v[], int low, int high){
-	int pivot, i, j;
-	pivot = v[low];
+int partition(Node v[], int low, int high){
+	int i, j;
+	Node pivot = v[low];
+
 	i = low;
 	j = high;
 	while(i < j){
-		while(v[i] <=pivot)
+		while(v[i].key <=pivot.key)
 		i++;
-		while(v[j]>pivot)
+		while(v[j].key >pivot.key)
 		j--;
 		if(i<j)
 		swap(v, i, j);
@@ -64,7 +65,7 @@ int partition(int v[], int low, int high){
 	@return there is no return.
 */
 
-void quick_sort(int v[], int low, int high){
+void quick_sort(Node v[], int low, int high){
 	if(low<high){
 		int pivot = partition(v, low, high);
 		quick_sort(v, low, (pivot-1));
@@ -79,7 +80,7 @@ void quick_sort(int v[], int low, int high){
 	@return there is no return.
 */
 
-void merge_sort(int v[], int n)
+void merge_sort(Node v[], int n)
 {
 	mergePart(v, 0, n / 2 - 1);
 	mergePart(v, n / 2, n - 1);
@@ -95,7 +96,7 @@ void merge_sort(int v[], int n)
 	@return there is no return.
 */
 
-void mergePart(int v[], int a, int b)
+void mergePart(Node v[], int a, int b)
 {
 	if (b - a > 1)
 	{
@@ -103,7 +104,7 @@ void mergePart(int v[], int a, int b)
 		mergePart(v, a + (b - a) / 2, b);
 		mergeJoin(v, a, b);
 	}
-	else if (v[a] > v[b])
+	else if (v[a].key > v[b].key)
 		swap(v, a, b);
 }
 
@@ -116,16 +117,16 @@ void mergePart(int v[], int a, int b)
 	@return there is no return.
 */
 
-void mergeJoin(int v[], int a, int b)
+void mergeJoin(Node v[], int a, int b)
 {
 	int i = a + (b - a + 1) / 2;
-	int n = i;
+	int n = i, j;
 	while (a < n)
 	{
-		if (v[a] > v[i])
+		if (v[a].key > v[i].key)
 			swap(v, a, i);
-		int j = i;
-		while (j < b && v[j] > v[j + 1])
+		j = i;
+		while (j < b && v[j].key > v[j + 1].key)
 		{
 			swap(v, j, j + 1);
 			j++;
