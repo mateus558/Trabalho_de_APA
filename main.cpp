@@ -12,17 +12,18 @@ using namespace std;
 
 int main(int argc, char * argv[]){
 	clock_t timeBeginning, timeEnd;
+	Node *v = NULL;
+	string path(argv[1]), algo;
+	Analysis to_save;
 	double timeWasted = 0.0;
-	Node *v2 = NULL;
-	string path(argv[1]);
-	int n, o;
+	int n, o, i = 0;
 	
 	o = atoi(argv[2]);
-	n = load_list(path, &v2);
+	n = load_list(path, &v);
 
 	if(n <= 100){
 		cout << "original: ";
-		print_nodes(v2, n);
+		print_nodes(v, n);
 		cout << endl;
 	}
 	
@@ -30,40 +31,58 @@ int main(int argc, char * argv[]){
 	cout << endl;
 	
 	timeBeginning = clock();
+	
 	switch(o){
 		case BUBBLE:
-			cout << "Bubble sort." << endl;
-			bubble_sort(v2, n);
+			algo = "Bubble";
+			cout << algo << endl;
+			bubble_sort(v, n);
 			break;
 		case SELECTION:
-			cout << "Selection sort." << endl;
-			selection_sort(v2, n);
+			algo = "Selection";
+			cout << algo << endl;
+			selection_sort(v, n);
 			break;
 		case INSERTION:
-			cout << "Insertion sort." << endl;
-			insertion_sort(v2, n);
+			algo = "Insertion";
+			cout << algo << endl;
+			insertion_sort(v, n);
 			break;
 		case MERGE:
-			cout << "Merge sort." << endl;
-			merge_sort(v2, n);
+			algo = "Merge";
+			cout << algo << endl;
+			merge_sort(v, n);
 			break;
 		case QUICK:
-			cout << "Quick sort." << endl;
-			quick_sort(v2, 0, n);
+			algo = "Quick";
+			cout << algo << endl;
+			quick_sort(v, 0, n);
 			break;
 		case HEAP:
-			cout << "Heap sort." << endl;
-			heap_sort(v2, n);
+			algo = "Heap";
+			cout << algo << endl;
+			heap_sort(v, n);
 			break;
 	}		
+	
+	while(path[i++] != '1');
+	
 	timeEnd = clock();
 	timeWasted = double(timeEnd - timeBeginning) / CLOCKS_PER_SEC;
+	to_save.list_type = path.substr(6, i - 7);
+	to_save.comp = comp;
+	to_save.atrib = atrib;
+	to_save.time = timeWasted;
+	to_save.size = n;
+	algo = string("Experiments/") + algo + to_save.list_type;
+	save_csv(algo, to_save);
 	
 	if(n <= 100){
 		cout << "\nSorted: " << endl;
-		print_nodes(v2, n);
+		print_nodes(v, n);
 		cout << endl;
 	}
+	
 	cout << "Number of comparisons: " << comp << endl;
 	cout << "Number of attributions: " << atrib << endl;
 	cout << "Time wasted: " << timeWasted  << "s."<< endl;

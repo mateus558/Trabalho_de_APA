@@ -13,8 +13,8 @@
 #include <iostream>
 #include <stdlib.h>
 
-int comp = 0;	//Number of comparisons
-int atrib = 0;	//Number of attributions
+long long int comp = 0;	//Number of comparisons
+long long int atrib = 0;	//Number of attributions
 
 using namespace std;
 
@@ -50,7 +50,6 @@ int partition(Node v[], int low, int high){
 	i = low;
 	j = high;
 	while(i < j){
-		comp++;
 		while(v[i].key <=pivot.key){
 			comp++;
 			atrib++;
@@ -65,7 +64,6 @@ int partition(Node v[], int low, int high){
 	 		comp++;
 	 		swap(v, i, j);
 	 	}
-
 	}
 	v[low] = v[j];
 	v[j] = pivot;
@@ -155,12 +153,10 @@ void mergeJoin(Node v[], int a, int b)
 		while (j < b && v[j].key > v[j + 1].key)
 		{
 			comp += 2;
-			atrib++;
 			swap(v, j, (j + 1));
 			j++;
 		}
 		a++;
-		comp++;
 		atrib += 2;
 	}
 }
@@ -183,10 +179,7 @@ void bubble_sort(Node v[], int n){
 				swap(v, j + 1, j);
 				swaps++;
 			}
-			comp++;
-			atrib++;
 		}
-		atrib++;
 		if(!swaps) return;
 	}
 }
@@ -203,7 +196,6 @@ void selection_sort(Node v[], int n){
 	for(i = 0; i < n-1; i++){
 		for(j = i + 1, min = v[i].key, pos_min = i; j < n; j++){
 			atrib++;
-			comp++;
 			if(v[j].key < min){
 				comp++;
 				min = v[j].key;
@@ -213,8 +205,7 @@ void selection_sort(Node v[], int n){
 		}
 		v[pos_min] = v[i];
 		v[i].key = min;
-		atrib += 5;
-		comp++;
+		atrib += 4;
 	}
 }
 
@@ -229,13 +220,13 @@ void insertion_sort(Node v[], int n){
 
 	for(i = 1; i < n; i++){
 		x = v[i].key;
-		atrib += 2;
+		atrib += 1;
 		comp++;
 		
 		for(j = i - 1; j >= 0 && v[j].key > x; --j){
 			v[j + 1] = v[j];
 			v[j].key = x;
-			atrib += 3;
+			atrib += 2;
 			comp += 2;
 		}
 	}
@@ -258,16 +249,23 @@ void max_heapify(Node a[], int i, int n) /// transforma o vetor que receber em u
     int r = 2*i + 2;  // right = 2*i + 2
 
     // If left child is larger than root
-    if (l < n && a[l].key > a[largest].key)
+    if (l < n && a[l].key > a[largest].key){
         largest = l;
+    	comp++;
+    	atrib++;
+    }
 
     // If right child is larger than largest so far
-    if (r < n && a[r].key > a[largest].key)
+    if (r < n && a[r].key > a[largest].key){
         largest = r;
+    	comp++;
+    	atrib++;
+    }
 
     // If largest is not root
     if (largest != i)
     {
+    	comp++;
         swap(a, i, largest);
 
         // Recursively heapify the affected sub-tree
@@ -276,35 +274,18 @@ void max_heapify(Node a[], int i, int n) /// transforma o vetor que receber em u
     return;
 }
 
-/*! Build max heap algorithm.
-
-	Transform an array into a max heap.
-	
-	@param a is an c-like array.
-	@param n is the size of the array v.
-	@return there is no return.
-*/
-void build_max_heap(Node a[], int n) /// cria um maxheap
-{
-    int i;
-    for(i = n/2; i >= 1; i--)
-    {
-        max_heapify(a, i, n);
-    }
-}
-
 /*!	Heap sort algorithm implementation.
 	
 	@param a is an c-like array.
 	@param n is the size of the array v.
 	@return there is no return.
 */
-
 void heap_sort(Node a[], int n) /// recebe um vetor desordenado e aplica o heapsort nele
 {
 	// Build heap (rearrange array)
-    for (int i = n / 2 - 1; i >= 0; i--)
+    for (int i = n / 2 - 1; i >= 0; i--){
         max_heapify(a, i, n);
+    }
 
     // One by one extract an element from heap
     for (int i=n-1; i>=0; i--)

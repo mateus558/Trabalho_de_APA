@@ -3,8 +3,8 @@
 
 #include <string>
 
-extern int comp;
-extern int atrib;
+extern long long int comp;
+extern long long int atrib;
 
 struct Node{
 	int key;
@@ -19,7 +19,6 @@ void mergePart(Node v[], int a, int b);
 void mergeJoin(Node v[], int a, int b);
 int partition(Node v[], int low, int high);
 void max_heapify(Node a[], int i, int n);
-void build_max_heap(Node a[], int n);
 
 /*!
 	Sorting main functions.
