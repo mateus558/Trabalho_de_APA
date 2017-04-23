@@ -216,17 +216,23 @@ void selection_sort(Node v[], int n){
 	@return there is no return.
 */
 void insertion_sort(Node v[], int n){
-	int i, j, x;
+	int i, j;
+	Node temp;
 
-	for(i = 1; i < n; i++){
-		comp++;
-		for(j = i - 1; j >= 0 && v[j].key > v[i].key; --j){
-			v[j + 1] = v[j];
-			v[j].key = x;
-			atrib += 2;
-			comp += 2;
-		}
-	}
+	for(i = 1;i <= n-1;i++){
+        temp = v[i];
+        j = i-1;
+ 		
+ 		comp++;
+        while((temp.key < v[j].key) && (j >= 0)){
+            v[j+1] = v[j];    //moves element forward
+            j = j-1;
+            comp++;
+            atrib += 2;
+        }
+        v[j+1] = temp;    //insert element in proper place
+        atrib += 3;
+    }
 }
 
 

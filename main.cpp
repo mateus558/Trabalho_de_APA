@@ -65,10 +65,11 @@ int main(int argc, char * argv[]){
 			break;
 	}
 
-	while(path[i++] != '1');
-
 	timeEnd = clock();
 	timeWasted = double(timeEnd - timeBeginning) / CLOCKS_PER_SEC;
+	
+	while(path[i++] != '1');
+	
 	to_save.list_type = path.substr(6, i - 7);
 	to_save.comp = comp;
 	to_save.atrib = atrib;
@@ -77,11 +78,11 @@ int main(int argc, char * argv[]){
 	algo = string("Experiments/") + algo + to_save.list_type;
 	save_csv(algo, to_save);
 	
-	/*if(n <= 100){
+	if(n <= 100){
 		cout << "\nSorted: " << endl;
 		print_nodes(v, n);
 		cout << endl;
-	}*/
+	}
 	
 	cout << "Number of comparisons: " << comp << endl;
 	cout << "Number of attributions: " << atrib << endl;
