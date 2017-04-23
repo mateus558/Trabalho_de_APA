@@ -17,7 +17,7 @@ int main(int argc, char * argv[]){
 	Analysis to_save;
 	double timeWasted = 0.0;
 	int n, o, i = 0;
-	
+
 	o = atoi(argv[2]);
 	n = load_list(path, &v);
 
@@ -29,9 +29,9 @@ int main(int argc, char * argv[]){
 
 	cout << "\nSize: " << n << endl;
 	cout << endl;
-	
+
 	timeBeginning = clock();
-	
+
 	switch(o){
 		case BUBBLE:
 			algo = "Bubble";
@@ -57,17 +57,16 @@ int main(int argc, char * argv[]){
 			algo = "Quick";
 			cout << algo << endl;
 			quick_sort(v, 0, n-1);
-			cout << "foi" << endl;
 			break;
 		case HEAP:
 			algo = "Heap";
 			cout << algo << endl;
 			heap_sort(v, n);
 			break;
-	}		
-	
+	}
+
 	while(path[i++] != '1');
-	
+
 	timeEnd = clock();
 	timeWasted = double(timeEnd - timeBeginning) / CLOCKS_PER_SEC;
 	to_save.list_type = path.substr(6, i - 7);
