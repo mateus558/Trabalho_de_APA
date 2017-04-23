@@ -67,7 +67,7 @@ int partition(Node v[], int low, int high){
 	}
 	v[low] = v[j];
 	v[j] = pivot;
-	atrib += 2;
+	atrib += 3;
 	return j;
 }
 
