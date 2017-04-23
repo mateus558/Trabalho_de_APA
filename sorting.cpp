@@ -224,7 +224,7 @@ void insertion_sort(Node v[], int n){
         j = i-1;
  		
  		comp++;
-        while((temp.key < v[j].key) && (j >= 0)){
+        while((j >= 0) && (temp.key < v[j].key)){
             v[j+1] = v[j];    //moves element forward
             j = j-1;
             comp++;
