@@ -1,0 +1,8 @@
+\select@language {brazil}
+\contentsline {section}{\numberline {1}Introdu\c c\~ao}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Considera\c c\~oes iniciais}{1}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Especifica\c c\~ao do problema}{1}{subsection.1.2}
+\contentsline {section}{\numberline {2}Algoritmo e estruturas de dados}{1}{section.2}
+\contentsline {section}{\numberline {3}An\'alise de complexidade dos algoritmos}{2}{section.3}
+\contentsline {section}{\numberline {4}Testes}{2}{section.4}
+\contentsline {section}{\numberline {5}Conclus\~ao}{2}{section.5}

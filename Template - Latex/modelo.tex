@@ -1,0 +1,178 @@
+\documentclass[brazil, a4paper,12pt]{article}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{indentfirst}
+\usepackage[usenames]{color}
+\geometry{a4paper,left=3cm,right=3cm,top=2.5cm,bottom=2.5cm}
+
+
+%Formatacão de codigo fonte
+\lstset{language=C,
+keywordstyle=\color{red}\bf,
+stringstyle=\color{red}\it,
+commentstyle=\color{blue}\it,
+numbers=left,
+stepnumber=5,
+firstnumber=1,
+numberstyle=\tiny,
+extendedchars=true,
+breaklines=true,
+captionpos=b,
+tabsize=2,
+frame=single,
+basicstyle=\footnotesize,
+showstringspaces=false
+}
+\renewcommand{\lstlistingname}{Programa}
+\renewcommand{\lstlistlistingname}{Lista de Programas}
+
+\begin{document}
+\begin{titlepage}
+
+  \vfill
+
+  \begin{center}
+    \begin{large}
+      Universidade Federal de Juiz de Fora
+    \end{large}
+  \end{center}
+
+  \begin{center}
+    \begin{large}
+      Instituto de CiÃªncias Exatas 
+    \end{large}
+  \end{center}
+
+  \begin{center}
+    \begin{large}
+      Departamento de CiÃªncia da ComputaÃ§Ã£o
+    \end{large}
+  \end{center}
+
+  \vfill
+
+  \begin{center}
+    \begin{Large}
+	      \textbf{DCC001}\\
+	      \textbf{ANÁLISE E PROJETO DE ALGORITMOS}\\
+	        Trabalho Prático\\
+    \end{Large}
+  \end{center}
+
+
+  \vfill
+
+  \begin{center}
+    \begin{large}
+      Nome do Aluno da Silva
+    \end{large}
+  \end{center}
+
+  \begin{center}
+    \begin{large}
+      Professor - Stênio Soares\\
+    \end{large}
+  \end{center}
+
+  \vfill
+
+  \begin{center}
+    \begin{large}
+      Juiz de Fora - MG \\
+      \today \\
+    \end{large}
+  \end{center}
+
+\clearpage
+\tableofcontents 
+\listoffigures
+\lstlistoflistings
+\listoftables
+\end{titlepage}
+
+
+\section{Introdução}
+
+Escrever aqui a introdução do trabalho...
+
+\subsection{Considerações iniciais}
+
+\begin{itemize}
+ \item Ambiente de desenvolvimento do código fonte: Code Blocks (por exemplo).
+ \item Linguagem utilizada: Linguagem C.
+ \item Ambiente de desenvolvimento da documentação: TeXnicCenter 1 BETA 7.50-Editor de \LaTeX.
+\end{itemize}
+
+\subsection{Especificação do problema}
+
+Você deverá implementar um tipo abstrato de dados TVetor para representar vetores no espaço $R^n$.
+Esse tipo abstrato deverá armazenar a dimensão do vetor e suas respectivas componentes. Considere que a dimensão dos vetores será determinada em tempo de execução.
+
+
+\section{Algoritmo e estruturas de dados}
+
+Em~\cite{rp:99}, são apresentadas estruturas de dados...
+
+O código resultante desse processo será apresentado no Programa~\ref{prog:exemplo}.
+
+\lstinputlisting[caption = {Timer},label={prog:exemplo}]{programa.c}
+
+
+\section{Análise de complexidade dos algoritmos}
+
+A equação resultante da análise de complexidade pode ser vista na Equação~\ref{eq:notacao}.
+
+\begin{equation} 
+\label{eq:notacao}
+O(n) = \sum_{i=1}^{n}{i^2 + 1} 
+\end{equation}
+
+Os dados coletados podem ser vistos na Tabela~\ref{tab:exemplo}
+
+\begin{table}
+ \caption{Dados referentes aos experimentos}
+ \label{tab:exemplo}
+ \begin{center}
+  \begin{tabular}{l|ccc}
+   Algoritmo & Tempo 1 & Tempo 2 & Tempo 3 \\
+   \hline
+   \hline
+   Quicksort  &  10    &  20     &   30 \\
+   HeapSort   &  10    &  60     &  530 \\
+   BublleSort & 100    & 100     & 1000 \\
+  \end{tabular}
+ \end{center}
+\end{table}
+
+
+
+\section{Testes}
+
+Estas estruturas são apresentadas na Figura~\ref{fig:exemplo}.
+
+\begin{figure}[!ht]
+	\begin{center}
+		\includegraphics[width=5cm]{fig001.jpg}
+	\end{center}
+	\caption{Estrutura da Pilha}
+	\label{fig:exemplo}
+\end{figure}
+
+
+
+\section{Conclusão}
+
+Neste trabalho foram revistos conceitos sobre...\cite{site1:2009}.
+
+Muito dos algoritmos são extraídos de:\cite{ziviani:2004}.
+
+\bibliographystyle{plain}
+\bibliography{modelo}
+
+\end{document}

@@ -1,0 +1,20 @@
+\begin{thebibliography}{1}
+
+\bibitem{rp:99}
+Rasmus Pagh.
+\newblock Hash and displace: Efficient evaluation of minimal perfect hash
+  functions.
+\newblock In {\em Workshop on Algorithms and Data Structures}, pages 49--54,
+  1999.
+
+\bibitem{site1:2009}
+Gabriel Torres.
+\newblock Clube do hardware, 2009.
+\newblock \url{http://clubedohardware.com.br}, visitado em 08/08/2009.
+
+\bibitem{ziviani:2004}
+N.~Ziviani.
+\newblock {\em Projeto de Algoritmos: com implementações em Pascal e C}.
+\newblock Cengage Learning (Thomson / Pioneira), São Paulo, 1st edition, 2004.
+
+\end{thebibliography}
