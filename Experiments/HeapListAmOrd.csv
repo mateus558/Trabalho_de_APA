@@ -1,0 +1,7 @@
+N, comparacoes, atribuicoes, tempo, tipo de array
+10, 84, 109, 1e-05, ListAmOrd
+100, 1914, 2707, 6.9e-05, ListAmOrd
+1000, 29088, 42036, 0.000792, ListAmOrd
+10000, 395796, 576361, 0.010742, ListAmOrd
+100000, 4952538, 7253529, 0.135873, ListAmOrd
+1000000, 59366004, 87457639, 1.72666, ListAmOrd

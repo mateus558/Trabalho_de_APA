@@ -1,0 +1,6 @@
+N, comparacoes, atribuicoes, tempo, tipo de array
+10, 53, 44, 5e-06, ListRO
+100, 4241, 4142, 6.2e-05, ListRO
+1000, 336107, 335108, 0.005327, ListRO
+10000, 42906723, 42896724, 0.445748, ListRO
+100000, 299977, 199978, 0.004775, ListRO
