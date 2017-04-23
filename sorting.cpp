@@ -114,18 +114,19 @@ void merge_sort(Node v[], int n)
 	@return there is no return.
 */
 
-void mergePart(Node v[], int a, int b)
+void mergePart(int v[], int a, int b)
 {
 	comp++;
 	if (b - a > 1)
 	{
-		mergePart(v, a, a + (b - a) / 2 - 1);
-		mergePart(v, a + (b - a) / 2, b);
+		mergePart(v, a, (a + b) / 2);
+		mergePart(v, (a + b) / 2 + 1, b);
 		mergeJoin(v, a, b);
 	}
-	else if (v[a].key > v[b].key){
-		swap(v, a, b);
+	else if (v[a] > v[b])
+	{
 		comp++;
+		swap(v, a, b);
 	}
 }
 
@@ -138,26 +139,28 @@ void mergePart(Node v[], int a, int b)
 	@return there is no return.
 */
 
-void mergeJoin(Node v[], int a, int b)
+void mergeJoin(int v[], int a, int b)
 {
-	int i = a + (b - a + 1) / 2;
-	int n = i, j;
-	atrib += 2;
-	while (a < n)
+	int tam = b - a + 1;
+	int m = (a + b) / 2;
+	int j = a;
+	int k = m + 1;
+	int vetAux[tam];
+	atrib += 5;
+	for (int i = 0; i < tam; i++)
 	{
+		if (v[j] < v[k] && j <= m)
+			vetAux[i] = v[j++];
+		else
+			vetAux[i] = v[k++];
+		atrib++;
+		comp += 3;
+	}
+	for (int i = 0; i < tam; i++)
+	{
+		v[a+i] = vetAux[i];
 		comp++;
-		if (v[a].key > v[i].key){
-			swap(v, a, i);
-		}
-		j = i;
-		while (j < b && v[j].key > v[j + 1].key)
-		{
-			comp += 2;
-			swap(v, j, (j + 1));
-			j++;
-		}
-		a++;
-		atrib += 2;
+		atrib++;
 	}
 }
 
