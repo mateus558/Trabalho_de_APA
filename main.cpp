@@ -26,7 +26,7 @@ int main(int argc, char * argv[]){
 		print_nodes(v, n);
 		cout << endl;
 	}
-	
+
 	cout << "\nSize: " << n << endl;
 	cout << endl;
 	
@@ -56,7 +56,8 @@ int main(int argc, char * argv[]){
 		case QUICK:
 			algo = "Quick";
 			cout << algo << endl;
-			quick_sort(v, 0, n);
+			quick_sort(v, 0, n-1);
+			cout << "foi" << endl;
 			break;
 		case HEAP:
 			algo = "Heap";
@@ -77,11 +78,11 @@ int main(int argc, char * argv[]){
 	algo = string("Experiments/") + algo + to_save.list_type;
 	save_csv(algo, to_save);
 	
-	if(n <= 100){
+	/*if(n <= 100){
 		cout << "\nSorted: " << endl;
 		print_nodes(v, n);
 		cout << endl;
-	}
+	}*/
 	
 	cout << "Number of comparisons: " << comp << endl;
 	cout << "Number of attributions: " << atrib << endl;

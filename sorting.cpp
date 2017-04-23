@@ -116,9 +116,9 @@ void merge_sort(Node v[], int n)
 
 void mergePart(Node v[], int a, int b)
 {
+	comp++;
 	if (b - a > 1)
 	{
-		comp++;
 		mergePart(v, a, a + (b - a) / 2 - 1);
 		mergePart(v, a + (b - a) / 2, b);
 		mergeJoin(v, a, b);
@@ -145,8 +145,8 @@ void mergeJoin(Node v[], int a, int b)
 	atrib += 2;
 	while (a < n)
 	{
+		comp++;
 		if (v[a].key > v[i].key){
-			comp++;
 			swap(v, a, i);
 		}
 		j = i;
@@ -173,9 +173,9 @@ void bubble_sort(Node v[], int n){
 
 	for(i = 0; ; ++i){
 		swaps = 0;
-		for(j = 0; j < n-1; ++j){			
+		for(j = 0; j < n-1; ++j){		
+			comp++;	
 			if(v[j].key > v[j + 1].key){
-				comp++;
 				swap(v, j + 1, j);
 				swaps++;
 			}
@@ -196,8 +196,8 @@ void selection_sort(Node v[], int n){
 	for(i = 0; i < n-1; i++){
 		for(j = i + 1, min = v[i].key, pos_min = i; j < n; j++){
 			atrib++;
+			comp++;
 			if(v[j].key < min){
-				comp++;
 				min = v[j].key;
 				pos_min = j;
 				atrib += 2;
@@ -219,11 +219,8 @@ void insertion_sort(Node v[], int n){
 	int i, j, x;
 
 	for(i = 1; i < n; i++){
-		x = v[i].key;
-		atrib += 1;
 		comp++;
-		
-		for(j = i - 1; j >= 0 && v[j].key > x; --j){
+		for(j = i - 1; j >= 0 && v[j].key > v[i].key; --j){
 			v[j + 1] = v[j];
 			v[j].key = x;
 			atrib += 2;
@@ -251,17 +248,17 @@ void max_heapify(Node a[], int i, int n) /// transforma o vetor que receber em u
     // If left child is larger than root
     if (l < n && a[l].key > a[largest].key){
         largest = l;
-    	comp++;
     	atrib++;
     }
 
     // If right child is larger than largest so far
     if (r < n && a[r].key > a[largest].key){
         largest = r;
-    	comp++;
     	atrib++;
     }
-
+	
+	comp += 2;
+	
     // If largest is not root
     if (largest != i)
     {

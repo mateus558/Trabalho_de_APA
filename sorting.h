@@ -3,8 +3,10 @@
 
 #include <string>
 
-extern long long int comp;
-extern long long int atrib;
+typedef long long int lli;
+
+extern lli comp;
+extern lli atrib;
 
 struct Node{
 	int key;
