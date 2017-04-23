@@ -88,7 +88,7 @@ void quick_sort(Node v[], int low, int high){
 		quick_sort(v, low, (pivot-1));
 		quick_sort(v, (pivot+1), high);
 	}
-	
+
 }
 
 /*!	Implementation of the merge sort algorithm
@@ -173,8 +173,8 @@ void bubble_sort(Node v[], int n){
 
 	for(i = 0; ; ++i){
 		swaps = 0;
-		for(j = 0; j < n-1; ++j){		
-			comp++;	
+		for(j = 0; j < n-1; ++j){
+			comp++;
 			if(v[j].key > v[j + 1].key){
 				swap(v, j + 1, j);
 				swaps++;
@@ -222,7 +222,7 @@ void insertion_sort(Node v[], int n){
 	for(i = 1;i <= n-1;i++){
         temp = v[i];
         j = i-1;
- 		
+
  		comp++;
         while((j >= 0) && (temp.key < v[j].key)){
             v[j+1] = v[j];    //moves element forward
@@ -238,7 +238,7 @@ void insertion_sort(Node v[], int n){
 
 
 /*! Max heapify algorithm.
-	
+
 	Rearrange a heap to maintain the heap property.
 
 	@param a is an c-like array.
@@ -262,9 +262,9 @@ void max_heapify(Node a[], int i, int n) /// transforma o vetor que receber em u
         largest = r;
     	atrib++;
     }
-	
+
 	comp += 2;
-	
+
     // If largest is not root
     if (largest != i)
     {
@@ -278,7 +278,7 @@ void max_heapify(Node a[], int i, int n) /// transforma o vetor que receber em u
 }
 
 /*!	Heap sort algorithm implementation.
-	
+
 	@param a is an c-like array.
 	@param n is the size of the array v.
 	@return there is no return.
