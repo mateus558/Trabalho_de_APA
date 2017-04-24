@@ -20,13 +20,13 @@ int main(int argc, char * argv[]){
 
 	o = atoi(argv[2]);
 	n = load_list(path, &v);
-
+/*
 	if(n <= 100){
 		cout << "original: ";
 		print_nodes(v, n);
 		cout << endl;
 	}
-
+*/
 	cout << "\nSize: " << n << endl;
 	cout << endl;
 
@@ -77,13 +77,13 @@ int main(int argc, char * argv[]){
 	to_save.size = n;
 	algo = string("Experiments/") + algo + to_save.list_type;
 	save_csv(algo, to_save);
-	
+/*
 	if(n <= 100){
 		cout << "\nSorted: " << endl;
 		print_nodes(v, n);
 		cout << endl;
 	}
-	
+*/	
 	cout << "Number of comparisons: " << comp << endl;
 	cout << "Number of attributions: " << atrib << endl;
 	cout << "Time wasted: " << timeWasted  << "s."<< endl;
