@@ -10,7 +10,6 @@ function Exp () {
 		done
 		let "N=N*10"
 	done
-	echo "$res" > Resultado_List$1.txt
 }
 
 Exp AOrd
