@@ -77,13 +77,13 @@ int main(int argc, char * argv[]){
 	to_save.size = n;
 	algo = string("Experiments/") + algo + to_save.list_type;
 	save_csv(algo, to_save);
-/*
+
 	if(n <= 100){
 		cout << "\nSorted: " << endl;
 		print_nodes(v, n);
 		cout << endl;
 	}
-*/	
+
 	cout << "Number of comparisons: " << comp << endl;
 	cout << "Number of attributions: " << atrib << endl;
 	cout << "Time wasted: " << timeWasted  << "s."<< endl;
