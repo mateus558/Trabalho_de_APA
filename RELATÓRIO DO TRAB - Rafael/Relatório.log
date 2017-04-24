@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.4.23)  24 APR 2017 12:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.4.23)  24 APR 2017 15:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -274,13 +274,10 @@ File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 LaTeX Warning: Label `prog:exemplo' multiply defined.
 
 
-LaTeX Warning: Label `prog:exemplo' multiply defined.
+LaTeX Warning: Label `Rotulo' multiply defined.
 
 
-LaTeX Warning: Label `prog:exemplo' multiply defined.
-
-
-LaTeX Warning: Label `prog:exemplo' multiply defined.
+LaTeX Warning: Label `Rotulo' multiply defined.
 
 
 LaTeX Warning: Label `prog:exemplo' multiply defined.
@@ -320,6 +317,9 @@ LaTeX Warning: Label `LISTRO' multiply defined.
 
 
 LaTeX Warning: Label `LISTRO' multiply defined.
+
+
+LaTeX Warning: Label `Rotulo' multiply defined.
 
 
 LaTeX Warning: Label `Rotulo' multiply defined.
@@ -450,15 +450,14 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@lol=\write6
 \openout6 = `Relat贸rio.lol'.
 
-
-(./Relat贸rio.lot
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 5.
+(babel)             in language  on input line 101.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 5.
+(babel)             in language  on input line 101.
  [2
 
-])
+]
+(./Relat贸rio.lot)
 \tf@lot=\write7
 \openout7 = `Relat贸rio.lot'.
 
@@ -473,8 +472,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 109.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 112.
 
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
@@ -487,8 +485,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 126.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 127.
- (./sorting.h)
-(./swap.cpp
+(./sorting.h) (./swap.cpp
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining portuges shorthand "|
@@ -501,282 +498,340 @@ l.4 	v[
        b] = aux; [1])
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 130.
- (./BubbleSort.cpp
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 6.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 6.
-) (./InsertionSort.cpp)
-(./SelectionSort.cpp
+
+<Figures/BubbleSort.png, id=220, 569.12625pt x 756.8275pt>
+File: Figures/BubbleSort.png Graphic file (type png)
+
+<use Figures/BubbleSort.png>
+Package pdftex.def Info: Figures/BubbleSort.png used on input line 133.
+(pdftex.def)             Requested size: 284.56242pt x 378.41283pt.
+
+<Figures/SelectionSort.png, id=222, 606.265pt x 783.92876pt>
+File: Figures/SelectionSort.png Graphic file (type png)
+
+<use Figures/SelectionSort.png>
+Package pdftex.def Info: Figures/SelectionSort.png used on input line 139.
+(pdftex.def)             Requested size: 303.13176pt x 391.96342pt.
+
+<Figures/InsertionSort.png, id=223, 598.235pt x 818.05624pt>
+File: Figures/InsertionSort.png Graphic file (type png)
+
+<use Figures/InsertionSort.png>
+Package pdftex.def Info: Figures/InsertionSort.png used on input line 145.
+(pdftex.def)             Requested size: 299.11676pt x 409.02711pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 148.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 148.
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.10 				atrib 
-               += 2; [2]) (./QuickSort.cpp) (./MergeSort.cpp
+l.148 	\end{figure}
+                    [2pdfTeX warning (ext4): destination with the same identifi
+er (name{figure.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.148 	\end{figure}
+                    <./Figures/BubbleSort.png>]
+<Figures/QuickSort.png, id=234, 814.04124pt x 668.4975pt>
+File: Figures/QuickSort.png Graphic file (type png)
+
+<use Figures/QuickSort.png>
+Package pdftex.def Info: Figures/QuickSort.png used on input line 151.
+(pdftex.def)             Requested size: 407.01962pt x 334.24792pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 9.
+(babel)             in language  on input line 154.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 9.
+(babel)             in language  on input line 154.
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.9 {
-      [3]) (./HeapSort.cpp
+l.154 	\end{figure}
+                    [3pdfTeX warning (ext4): destination with the same identifi
+er (name{figure.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.154 	\end{figure}
+                    <./Figures/SelectionSort.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 155.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 155.
+ [4pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.155 ...ort},label={prog:exemplo}]{MergeSort.cpp}
+                                                   <./Figures/InsertionSort.png
+>] (./MergeSort.cpp
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 3.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 29.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 29.
+ [5pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.29 	int 
+          vetAux[tam]; <./Figures/QuickSort.png>]) (./HeapSort.cpp
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 4.
+)
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 17.
+(babel)             in language  on input line 156.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 17.
- [4])
+(babel)             in language  on input line 156.
+ [6]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 140.
+(babel)             in language  on input line 160.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 142.
+(babel)             in language  on input line 162.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 145.
+(babel)             in language  on input line 165.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 148.
+(babel)             in language  on input line 168.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 151.
+(babel)             in language  on input line 171.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 154.
+(babel)             in language  on input line 174.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 176.
+(babel)             in language  on input line 196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 180.
+(babel)             in language  on input line 202.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 180.
- [5]
+(babel)             in language  on input line 203.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 182.
+(babel)             in language  on input line 205.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 183.
+(babel)             in language  on input line 239.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 185.
+(babel)             in language  on input line 239.
+
+[7]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 237.
+(babel)             in language  on input line 257.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 238.
+(babel)             in language  on input line 258.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 240.
+(babel)             in language  on input line 260.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 274.
+(babel)             in language  on input line 294.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 274.
- [6pdfTeX warning (ext4): destination with the same identifier (name{table.1}) 
+(babel)             in language  on input line 294.
+ [8pdfTeX warning (ext4): destination with the same identifier (name{table.1}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.274 		\end{table}
+l.294 		\end{table}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{table.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.274 		\end{table}
+l.294 		\end{table}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{table.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.274 		\end{table}
+l.294 		\end{table}
                    ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 292.
+(babel)             in language  on input line 312.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 293.
+(babel)             in language  on input line 313.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 295.
+(babel)             in language  on input line 315.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 329.
+(babel)             in language  on input line 349.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 329.
- [7pdfTeX warning (ext4): destination with the same identifier (name{table.4}) 
+(babel)             in language  on input line 349.
+ [9pdfTeX warning (ext4): destination with the same identifier (name{table.4}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.329 		\end{table}
+l.349 		\end{table}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{table.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.329 		\end{table}
+l.349 		\end{table}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{table.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.329 		\end{table}
+l.349 		\end{table}
                    ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 347.
+(babel)             in language  on input line 367.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 348.
+(babel)             in language  on input line 368.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 350.
+(babel)             in language  on input line 370.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 384.
+(babel)             in language  on input line 404.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 384.
- [8pdfTeX warning (ext4): destination with the same identifier (name{table.7}) 
-has been already used, duplicate ignored
+(babel)             in language  on input line 404.
+ [10pdfTeX warning (ext4): destination with the same identifier (name{table.7})
+ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.384 	\end{table}
+l.404 	\end{table}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{table.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.384 	\end{table}
+l.404 	\end{table}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{table.9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.384 	\end{table}
-                  ] <Charts/LROCOMP.png, id=404, 455.45157pt x 255.95625pt>
+l.404 	\end{table}
+                  ] <Charts/LROCOMP.png, id=362, 455.45157pt x 255.95625pt>
 File: Charts/LROCOMP.png Graphic file (type png)
 
 <use Charts/LROCOMP.png>
-Package pdftex.def Info: Charts/LROCOMP.png used on input line 404.
+Package pdftex.def Info: Charts/LROCOMP.png used on input line 424.
 (pdftex.def)             Requested size: 455.45045pt x 255.95561pt.
 
-Overfull \hbox (28.6591pt too wide) in paragraph at lines 404--405
+Overfull \hbox (28.6591pt too wide) in paragraph at lines 424--425
 [] 
  []
 
-<Charts/LROATRIB.png, id=405, 455.45157pt x 255.95625pt>
+<Charts/LROATRIB.png, id=363, 455.45157pt x 255.95625pt>
 File: Charts/LROATRIB.png Graphic file (type png)
 
 <use Charts/LROATRIB.png>
-Package pdftex.def Info: Charts/LROATRIB.png used on input line 410.
+Package pdftex.def Info: Charts/LROATRIB.png used on input line 430.
 (pdftex.def)             Requested size: 455.45045pt x 255.95561pt.
 
-Overfull \hbox (28.6591pt too wide) in paragraph at lines 410--411
+Overfull \hbox (28.6591pt too wide) in paragraph at lines 430--431
 [] 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 413.
+(babel)             in language  on input line 433.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 413.
-[9pdfTeX warning (ext4): destination with the same identifier (name{table.10}) 
-has been already used, duplicate ignored
+(babel)             in language  on input line 433.
+[11pdfTeX warning (ext4): destination with the same identifier (name{table.10})
+ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.413 	\end{figure}
+l.433 	\end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{table.11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.413 	\end{figure}
+l.433 	\end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{table.12}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.413 	\end{figure}
-                   ] <Charts/LROTG.png, id=412, 455.45157pt x 255.95625pt>
+l.433 	\end{figure}
+                   ] <Charts/LROTG.png, id=368, 455.45157pt x 255.95625pt>
 File: Charts/LROTG.png Graphic file (type png)
 
 <use Charts/LROTG.png>
-Package pdftex.def Info: Charts/LROTG.png used on input line 416.
+Package pdftex.def Info: Charts/LROTG.png used on input line 436.
 (pdftex.def)             Requested size: 455.45045pt x 255.95561pt.
 
-Overfull \hbox (28.6591pt too wide) in paragraph at lines 416--417
+Overfull \hbox (28.6591pt too wide) in paragraph at lines 436--437
 [] 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 420.
+(babel)             in language  on input line 440.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 420.
-[10pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
+(babel)             in language  on input line 440.
+[12pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.420 	\section
+l.440 	\section
                {Conclus鉶}pdfTeX warning (ext4): destination with the same iden
-tifier (name{figure.2}) has been already used, duplicate ignored
+tifier (name{figure.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.420 	\section
+l.440 	\section
                {Conclus鉶} <./Charts/LROCOMP.png (PNG copy)> <./Charts/LROATRIB
 .png (PNG copy)>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 420.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 426.
+(babel)             in language  on input line 440.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 446.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 426.
+(babel)             in language  on input line 446.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 426.
- [11pdfTeX warning (ext4): destination with the same identifier (name{figure.3}
+(babel)             in language  on input line 446.
+ [13pdfTeX warning (ext4): destination with the same identifier (name{figure.7}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.426 	\end{document}
+l.446 	\end{document}
                       <./Charts/LROTG.png (PNG copy)>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 426.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 446.
  (./Relat贸rio.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 426.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 426.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 446.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 446.
+Package rerunfilecheck Info: File `Relat贸rio.out' has not changed.
+(rerunfilecheck)             Checksum: 9F451397B1574794194A26E4BB54B0E5;1841.
 
-
-Package rerunfilecheck Warning: File `Relat贸rio.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Relat贸rio.out':
-(rerunfilecheck)             Before: 3F42764941A819692B366C2124BC1811;1349
-(rerunfilecheck)             After:  9F451397B1574794194A26E4BB54B0E5;1841.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 426.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 446.
  ) 
 Here is how much of TeX's memory you used:
- 8414 strings out of 494929
- 118889 string characters out of 6180142
- 385872 words of memory out of 5000000
- 11327 multiletter control sequences out of 15000+600000
+ 8324 strings out of 494929
+ 117933 string characters out of 6180142
+ 365872 words of memory out of 5000000
+ 11326 multiletter control sequences out of 15000+600000
  13309 words of font info for 32 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 34i,10n,49p,648b,1855s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/rafael/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/
-rafael/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/rafael/.te
-xmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/rafael/.texmf-var/fo
-nts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/rafael/.texmf-var/fonts/pk/ljf
-our/jknappen/ec/ecrm1200.600pk> </home/rafael/.texmf-var/fonts/pk/ljfour/jknapp
-en/ec/ecbx1200.600pk> </home/rafael/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm
-1728.600pk> </home/rafael/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk
-> </home/rafael/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb>
-Output written on Relat贸rio.pdf (14 pages, 245868 bytes).
+ 34i,10n,49p,648b,1853s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{lstlisting.5} has been referenced but does not ex
+ist, replaced by a fixed one
+
+ </home/rafael/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/ra
+fael/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/rafael/.texm
+f-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/rafael/.texmf-var/font
+s/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/rafael/.texmf-var/fonts/pk/ljfou
+r/jknappen/ec/ecrm1200.600pk> </home/rafael/.texmf-var/fonts/pk/ljfour/jknappen
+/ec/ecbx1200.600pk> </home/rafael/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm17
+28.600pk> </home/rafael/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> 
+</home/rafael/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb>
+Output written on Relat贸rio.pdf (16 pages, 328832 bytes).
 PDF statistics:
- 842 PDF objects out of 1000 (max. 8388607)
- 495 compressed objects within 5 object streams
- 249 named destinations out of 1000 (max. 500000)
- 176 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 778 PDF objects out of 1000 (max. 8388607)
+ 424 compressed objects within 5 object streams
+ 167 named destinations out of 1000 (max. 500000)
+ 244 words of extra memory for PDF output out of 10000 (max. 10000000)
 
