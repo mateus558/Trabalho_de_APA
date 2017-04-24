@@ -53,6 +53,7 @@ void quick_sort(Node v[], int low, int high)
 
 	while(i <= j)
 	{
+		comp++;
 		while(v[i].key < pivot)
 		{
 			comp++;
@@ -72,9 +73,9 @@ void quick_sort(Node v[], int low, int high)
 		}
 	}
 
+	comp += 2;
 	if(j > low)
 		quick_sort(v, low, j);
-
 	if(i < high)
 		quick_sort(v, j + 1, high);
 }
