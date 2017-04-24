@@ -4,5 +4,6 @@
 \contentsline {subsection}{\numberline {1.2}Especifica\c c\~ao do problema}{1}{subsection.1.2}
 \contentsline {section}{\numberline {2}Algoritmo e estruturas de dados}{1}{section.2}
 \contentsline {section}{\numberline {3}An\'alise de complexidade dos algoritmos}{2}{section.3}
+\contentsline {subsection}{\numberline {3.1}An\'alise do Bubble Sort}{2}{subsection.3.1}
 \contentsline {section}{\numberline {4}Testes}{2}{section.4}
-\contentsline {section}{\numberline {5}Conclus\~ao}{2}{section.5}
+\contentsline {section}{\numberline {5}Conclus\~ao}{3}{section.5}

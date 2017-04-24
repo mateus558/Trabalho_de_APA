@@ -129,14 +129,32 @@ O código resultante desse processo será apresentado no Programa~\ref{prog:exempl
 
 \section{Análise de complexidade dos algoritmos}
 
-A equação resultante da análise de complexidade pode ser vista na Equação~\ref{eq:notacao}.
+\subsection{Análise do Bubble Sort}
+O bubble sort faz múltiplas passadas em uma lista, em cada passada ele verifica se um par de elementos adjacentes estão em ordem, caso não estejam, a posição deles é trocada de forma que o maior deles fique após o menor, isso é repetido até que não sejam mais necessárias trocas.\par
+	O melhor caso do bubble sort é quando a sua entrada é uma lista ordenada, neste caso os elementos já estão em ordem nenhuma troca é efetuada e o algoritmo termina na primeira passada, logo sua complexidade é na ordem de $O(n)$.\par
+	\begin{figure}[!ht]
+		\begin{center}
+			\includegraphics[width=5cm]{bubblepass.png}
+		\end{center}
+		\caption{Uma passada do bubble sort.}
+		\label{fig:exemplo}
+	\end{figure}
+	No pior caso podemos levar em consideração quando os elementos estão ordenados em ordem decrescente, neste caso na iteração 0 o block roda $n-1-0$ vezes, na iteração 1 ele roda $n-1-(n-1)=0$ vezes. Então no total, o bloco roda a quantidade de vezes expressa na Equação~\ref{eq:notacao}.
 
-\begin{equation} 
+\begin{equation}
 \label{eq:notacao}
-O(n) = \sum_{i=1}^{n}{i^2 + 1} 
-\end{equation}
+O(n) = \sum_{i=0}^{n-1}{n - i - 1} = n^2 - \sum_{i=0}^{n-1}{i - n} = n^2 - n*(n - 1)/2 = n^2/2 - n/2
+\end{equation} 
 
-Os dados coletados podem ser vistos na Tabela~\ref{tab:exemplo}
+\par Dando um pior caso na ordem de $O(n^2)$.
+%A equação resultante da análise de complexidade pode ser vista na Equação~\ref{eq:notacao}.
+
+%\begin{equation} 
+%\label{eq:notacao}
+%O(n) = \sum_{i=1}^{n}{i^2 + 1} 
+%\end{equation}
+
+%Os dados coletados podem ser vistos na Tabela~\ref{tab:exemplo}
 
 \begin{table}
  \caption{Dados referentes aos experimentos}
@@ -159,13 +177,13 @@ Os dados coletados podem ser vistos na Tabela~\ref{tab:exemplo}
 
 Estas estruturas são apresentadas na Figura~\ref{fig:exemplo}.
 
-\begin{figure}[!ht]
-	\begin{center}
-		\includegraphics[width=5cm]{fig001.jpg}
-	\end{center}
-	\caption{Estrutura da Pilha}
-	\label{fig:exemplo}
-\end{figure}
+%\begin{figure}[!ht]
+%	\begin{center}
+%		\includegraphics[width=5cm]{fig001.jpg}
+%	\end{center}
+%	\caption{Estrutura da Pilha}
+%	\label{fig:exemplo}
+%\end{figure}
 
 
 
