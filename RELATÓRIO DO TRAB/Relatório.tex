@@ -1,0 +1,426 @@
+	\documentclass[brazil, a4paper,12pt]{article}
+	\usepackage[brazil]{babel}
+	\usepackage{graphicx}
+	\usepackage{geometry}
+	\usepackage[latin1]{inputenc}
+	\usepackage[T1]{fontenc}
+	\usepackage{url}
+	\usepackage{hyperref}
+	\usepackage{listings}
+	\usepackage{indentfirst}
+	\usepackage[usenames]{color}
+	\usepackage{multirow}
+	\usepackage{float}
+	\geometry{a4paper,left=3cm,right=3cm,top=2.5cm,bottom=2.5cm}
+	
+	
+	%Formatacão de codigo fonte
+	\lstset{language=C,
+	keywordstyle=\color{red}\bf,
+	stringstyle=\color{red}\it,
+	commentstyle=\color{blue}\it,
+	numbers=left,
+	stepnumber=5,
+	firstnumber=1,
+	numberstyle=\tiny,
+	extendedchars=true,
+	breaklines=true,
+	captionpos=b,
+	tabsize=2,
+	frame=single,
+	basicstyle=\footnotesize,
+	showstringspaces=false
+	}
+	\renewcommand{\lstlistingname}{Algoritmo}
+	\renewcommand{\lstlistlistingname}{Lista de Programas}
+	
+	\begin{document}
+	\begin{titlepage}
+	
+	  \vfill
+	
+	  \begin{center}
+	    \begin{large}
+	      Universidade Federal de Juiz de Fora
+	    \end{large}
+	  \end{center}
+	
+	  \begin{center}
+	    \begin{large}
+	      Instituto de Ciências Exatas 
+	    \end{large}
+	  \end{center}
+	
+	  \begin{center}
+	    \begin{large}
+	      Departamento de Ciência da Computação
+	    \end{large}
+	  \end{center}
+	
+	  \vfill
+	
+	  \begin{center}
+	    \begin{Large}
+		      \textbf{DCC001}\\
+		      \textbf{ANÁLISE E PROJETO DE ALGORITMOS}\\
+		        Trabalho Prático\\
+	    \end{Large}
+	  \end{center}
+	
+	
+	  \vfill
+	
+	  \begin{center}
+	    \begin{large}
+	      Rafael Terra de Souza\\
+	      Mateus Coutinho Marim\\
+	      Aleksander Yacovenco\\
+	      Mattheus Soares Santos\\
+	    \end{large}
+	  \end{center}
+	  
+	  \begin{center}
+	    \begin{large}
+	      Professor - Stênio Soares\\
+	    \end{large}
+	  \end{center}
+	
+	  \vfill
+	
+	  \begin{center}
+	    \begin{large}
+	      Juiz de Fora - MG \\
+	      \today \\
+	    \end{large}
+	  \end{center}
+	
+	\clearpage
+	\tableofcontents 
+	\listoffigures
+	\lstlistoflistings
+	\listoftables
+	\end{titlepage}
+	
+	
+	\section{Introdução}
+	
+	O objetivo deste trabalho é a implementação e análise de algoritmos de ordenação, dentre os quais foram utilizados: BubbleSort, SelectionSort, InsertionSort, MergeSort, QuickSort e HeapSort. Foram analisados o número de comparações realizadas, o número de atribuições realizadas e o tempo de execução para cada um dos algoritmos citados anteriormente.
+	
+	\subsection{Considerações iniciais}
+	
+	\begin{itemize}
+	 \item Ambiente de desenvolvimento do código fonte: CLion, Atom+terminal e Gedit+terminal.
+	 \item Linguagem utilizada: Linguagem C/C++.
+	 \item Ambiente de desenvolvimento da documentação: TexStudio, editor de latex para Texlive.
+	\end{itemize}
+	
+	\subsection{Especifição do problema}
+	
+	A partir de vetores de dados passados, utilizar os algoritmos BubbleSort, SelectionSort, InsertionSort, MergeSort, QuickSort e HeapSort para ordenar os dados dos vetores, calcular o tempo de execução de cada um desses algoritmos, assim como quantas atribuições e quantas comparações são feitas por cada um dos algoritmos citados anteriormente. Após tais dados coletados, comparar os algoritmos não eficientes (BubbleSort, InsertionSort e SelectionSort) e eficientes (QuickSort, HeapSort e MergeSort), apontando a análise de complexidade de cada um dos algoritmos e quais foram os testes realizados com os vetores passados.
+	
+	\section{Algoritmo e estruturas de dados}
+	
+	Estrutura de dados utilizada:
+	
+	As instâncias utilizadas são armazenadas em uma struct contendo uma chave to tipo inteiro e uma string que armazena o nome de cada elemento.
+	\subsection{Estruturas gerais}
+	\lstinputlisting[caption = {Struct},label={prog:exemplo}]{sorting.h}
+	Função swap, utilizada para trocar realizar a troca de dois elementos do vetor.
+	\lstinputlisting[caption = {Swap},label={prog:exemplo}]{swap.cpp}
+	\subsection{Algoritmos de ordenação}
+	\lstinputlisting[caption = {BubbleSort},label={prog:exemplo}]{BubbleSort.cpp}
+	\lstinputlisting[caption = {InsertionSort},label={prog:exemplo}]{InsertionSort.cpp}
+	\lstinputlisting[caption = {SelectionSort},label={prog:exemplo}]{SelectionSort.cpp}
+	\lstinputlisting[caption = {QuickSort},label={prog:exemplo}]{QuickSort.cpp}
+	\lstinputlisting[caption = {MergeSort},label={prog:exemplo}]{MergeSort.cpp}
+	\lstinputlisting[caption = {HeapSort},label={prog:exemplo}]{HeapSort.cpp}
+	
+	
+	
+	\section{Análise de complexidade dos algoritmos}
+	
+	\subsection{BubbleSort}
+	 %Conteudo
+	 
+	\subsection{InsertionSort}
+	%Conteudo
+	
+	\subsection{MergeSort}
+	%Conteudo
+	
+	\subsection{HeapSort}
+	%Conteudo
+	
+	\subsection{QuickSort}
+	O algoritmo quicksort possui a seguinte equação de recorrência:
+	\begin{equation}
+	\label{eq:notacao}
+	T(n) = T(k) + T(n - k) + c\times n
+	\end{equation}
+	Onde o algoritmo particiona a lista recursivamente em duas partes escolhendo um pivô e as partes são k e n - k.
+	No pior caso o pivô é o pior possível, então:
+		\begin{equation}
+		\label{eq:notacao}
+		%equação
+		\end{equation}
+	A equação resultante da análise de complexidade pode ser vista na Equação~\ref{eq:notacao}.
+	
+	\begin{equation} 
+	\label{eq:notacao}
+	O(n) = \sum_{i=1}^{n}{i^2 + 1} 
+	\end{equation}
+	
+	
+	
+	
+	\section{Testes}
+	
+	Os testes foram realizados com os quatro algoritmos de ordenação. Como os algoritmos BubbleSort, InsertionSort e SelectionSort são considerados ineficientes em relção aos outros eles foram separados e comparados entre si.
+	Para realizar os testes utilizamos quatro tipos de instâncias: lista ordenada em ordem crescente, lista ordenada em ordem decrescente, lista quase aleatória(primeiro e ultimo elementos trocados) e lista aleatória. Cada tipo possui instâncias de 10, 100, 1000, 10000, 100000 e 1000000 elementos.
+	
+	
+	\subsection {Lista ordenada em ordem crescente}
+	\subsubsection{Algoritmos ineficientes}
+	%conteudo
+	\subsubsection{Algoritmos eficientes}
+		\begin{table}[H]
+			\centering
+			\caption{Comparações - lista ordenada crescentemente}
+			\label{LISTAORD}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				\multicolumn{4}{|c|}{Quantidade de comparações}                                           \\ \hline
+				\multirow{2}{*}{Tamanho da lista} & \multicolumn{3}{c|}{Algoritmo de ordenação utilizado} \\ \cline{2-4} 
+				& Merge            & Quick            & Heap            \\ \hline
+				10                                & 114              & 53               & 93              \\ \hline
+				100                               & 2526             & 866              & 1923            \\ \hline
+				1000                              & 37022            & 11896            & 29127           \\ \hline
+				10000                             & 513502           & 154739           & 395871          \\ \hline
+				100000                            & 6531070          & 1868358          & 4952565         \\ \hline
+				1000000                           & 77048574         & 21880232         & 59363379        \\ \hline
+			\end{tabular}
+		\end{table}
+		\begin{table}[H]
+			\centering
+			\caption{Atribuições - lista ordenada crescentemente}
+			\label{LISTAORD}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				\multicolumn{4}{|c|}{Quantidade de atribuições}                                           \\ \hline
+				\multirow{2}{*}{Tamanho da lista} & \multicolumn{3}{c|}{Algoritmo de ordenação utilizado} \\ \cline{2-4} 
+				& Merge            & Quick           & Heap             \\ \hline
+				10                                & 77               & 42              & 121              \\ \hline
+				100                               & 1515             & 456             & 2718             \\ \hline
+				1000                              & 20555            & 4506            & 42090            \\ \hline
+				10000                             & 280363           & 47706           & 576455           \\ \hline
+				100000                            & 3527675          & 465528          & 7255742          \\ \hline
+				1000000                           & 40621435         & 4524282         & 87453863         \\ \hline
+			\end{tabular}
+		\end{table}
+		\begin{table}[H]
+			\centering
+			\caption{Tempo gasto - lista ordenada crescentemente}
+			\label{LISTAORD}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				\multicolumn{4}{|c|}{Tempo gasto em segundos}                                             \\ \hline
+				\multirow{2}{*}{Tamanho da lista} & \multicolumn{3}{c|}{Algoritmo de ordenação utilizado} \\ \cline{2-4} 
+				& Merge            & Quick            & Heap            \\ \hline
+				10                                & 1,00E-05         & 1,10E-05         & 1,80E-05        \\ \hline
+				100                               & 3,60E-05         & 3,70E-05         & 0,000171        \\ \hline
+				1000                              & 9,20E-05         & 7,50E-05         & 0,000687        \\ \hline
+				10000                             & 0,001205         & 0,000783         & 0,009227        \\ \hline
+				100000                            & 0,014039         & 0,007828         & 0,093136        \\ \hline
+				1000000                           & 0,153944         & 0,083055         & 1,19613         \\ \hline
+			\end{tabular}
+		\end{table}
+	\subsection {Lista ordenada em ordem decrescente}
+	\subsubsection{Algoritmos ineficientes}
+	%conteudo
+	\subsubsection{Algoritmos eficientes}
+		\begin{table}[H]
+			\centering
+			\caption{Comparações - Lista ordenada decrescentemente}
+			\label{LISTDORD}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				\multicolumn{4}{|c|}{Quantidade de comparações}                                           \\ \hline
+				\multirow{2}{*}{Tamanho da lista} & \multicolumn{3}{c|}{Algoritmo de ordenação utilizado} \\ \cline{2-4} 
+				& Merge            & Quick            & Heap            \\ \hline
+				10                                & 118              & 50               & 66              \\ \hline
+				100                               & 2562             & 870              & 1551            \\ \hline
+				1000                              & 37510            & 11894            & 24951           \\ \hline
+				10000                             & 517598           & 154736           & 350091          \\ \hline
+				100000                            & 6565534          & 1868362          & 4492305         \\ \hline
+				1000000                           & 77524286         & 21880230         & 55000227        \\ \hline
+			\end{tabular}
+		\end{table}
+		\begin{table}[H]
+			\centering
+			\caption{Atribuições - lista ordenada decrescentemente}
+			\label{LISTDORD}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				\multicolumn{4}{|c|}{Quantidade de atribuições}                                           \\ \hline
+				\multirow{2}{*}{Tamanho da lista} & \multicolumn{3}{c|}{Algoritmo de ordenação utilizado} \\ \cline{2-4} 
+				& Merge            & Quick           & Heap             \\ \hline
+				10                                & 89               & 54              & 81               \\ \hline
+				100                               & 1623             & 609             & 2112             \\ \hline
+				1000                              & 22019            & 6003            & 35291            \\ \hline
+				10000                             & 292651           & 62703           & 503710           \\ \hline
+				100000                            & 3631067          & 615531          & 6517115          \\ \hline
+				1000000                           & 42048571         & 6024279         & 80233851         \\ \hline
+			\end{tabular}
+		\end{table}
+		\begin{table}[H]
+			\centering
+			\caption{Tempo gasto - lista ordenada decrescentemente}
+			\label{LISTDORD}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				\multicolumn{4}{|c|}{Tempo gasto em segundos}                                             \\ \hline
+				\multirow{2}{*}{Tamanho da lista} & \multicolumn{3}{c|}{Algoritmo de ordenação utilizado} \\ \cline{2-4} 
+				& Merge            & Quick            & Heap            \\ \hline
+				10                                & 3,00E-06         & 3,00E-06         & 4,00E-06        \\ \hline
+				100                               & 1,20E-05         & 1,30E-05         & 3,60E-05        \\ \hline
+				1000                              & 0,000103         & 0,000115         & 0,000498        \\ \hline
+				10000                             & 0,001216         & 0,000915         & 0,006804        \\ \hline
+				100000                            & 0,01467          & 0,009953         & 0,087639        \\ \hline
+				1000000                           & 0,179583         & 0,110791         & 1,12486         \\ \hline
+			\end{tabular}
+		\end{table}
+	\subsection {Lista quase ordenada}
+	\subsubsection{Algoritmos ineficientes}
+	%conteudo
+	\subsubsection{Algoritmos eficientes}
+		\begin{table}[H]
+			\centering
+			\caption{Comparações - lista quase ordenada}
+			\label{LISTAMORD}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				\multicolumn{4}{|c|}{Quantidade de comparações}                                           \\ \hline
+				\multirow{2}{*}{Tamanho da lista} & \multicolumn{3}{c|}{Algoritmo de ordenação utilizado} \\ \cline{2-4} 
+				& Merge            & Quick            & Heap            \\ \hline
+				10                                & 116              & 53               & 84              \\ \hline
+				100                               & 2527             & 866              & 1914            \\ \hline
+				1000                              & 37023            & 11896            & 29088           \\ \hline
+				10000                             & 513504           & 154739           & 395796          \\ \hline
+				100000                            & 6531071          & 1868358          & 4952538         \\ \hline
+				1000000                           & 77048575         & 21880232         & 59366004        \\ \hline
+			\end{tabular}
+		\end{table}
+		\begin{table}[H]
+			\centering
+			\caption{Atribuições - lista quase ordenada}
+			\label{LISTAMORD}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				\multicolumn{4}{|c|}{Quantidade de atribuições}                          \\ \hline
+				Tamanho da lista & \multicolumn{3}{c|}{Algoritmo de ordenação utilizado} \\ \hline
+				& Merge            & Quick           & Heap             \\ \hline
+				10               & 83               & 45              & 109              \\ \hline
+				100              & 1518             & 459             & 2707             \\ \hline
+				1000             & 20558            & 4509            & 42036            \\ \hline
+				10000            & 280369           & 47709           & 576361           \\ \hline
+				100000           & 3527678          & 465531          & 7253529          \\ \hline
+				1000000          & 40621438         & 4524285         & 87457639         \\ \hline
+			\end{tabular}
+		\end{table}
+		\begin{table}[H]
+			\centering
+			\caption{Tempo gasto - lista quase ordenada}
+			\label{LISTAMORD}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				\multicolumn{4}{|c|}{Tempo gasto em segundos}                                             \\ \hline
+				\multirow{2}{*}{Tamanho da lista} & \multicolumn{3}{c|}{Algoritmo de ordenação utilizado} \\ \cline{2-4} 
+				& Merge            & Quick            & Heap            \\ \hline
+				10                                & 3,00E-06         & 3,00E-06         & 4,00E-06        \\ \hline
+				100                               & 9,00E-06         & 1,00E-05         & 4,20E-05        \\ \hline
+				1000                              & 0,000105         & 6,10E-05         & 0,000559        \\ \hline
+				10000                             & 0,000998         & 0,00064          & 0,007651        \\ \hline
+				100000                            & 0,012542         & 0,007002         & 0,09462         \\ \hline
+				1000000                           & 0,153052         & 0,086916         & 1,18886         \\ \hline
+			\end{tabular}
+		\end{table}
+	\subsection{Lista Aleatória}
+	\subsubsection{Algoritmos ineficientes}
+	%conteudo
+		\subsubsection{Algoritmos eficientes}
+	\begin{table}[H]
+		\centering
+		\caption{Comparações - lista aleatória}
+		\label{LISTRO}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\multicolumn{4}{|c|}{Quantidade de comparações}                                           \\ \hline
+			\multirow{2}{*}{Tamanho da lista} & \multicolumn{3}{c|}{Algoritmo de ordenação utilizado} \\ \cline{2-4} 
+			& Merge            & Quick            & Heap            \\ \hline
+			10                                & 117              & 62               & 84              \\ \hline
+			100                               & 2546             & 989              & 1737            \\ \hline
+			1000                              & 37279            & 14712            & 27102           \\ \hline
+			10000                             & 515561           & 189538           & 372300          \\ \hline
+			100000                            & 6548267          & 2448530          & 4726323         \\ \hline
+			1000000                           & 77286078         & 29393733         & 57147021        \\ \hline
+		\end{tabular}
+	\end{table}
+	\begin{table}[H]
+		\centering
+		\caption{Atribuições - lista aleatória}
+		\label{LISTRO}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\multicolumn{4}{|c|}{Quantidade de atribuições}                                           \\ \hline
+			\multirow{2}{*}{Tamanho da lista} & \multicolumn{3}{c|}{Algoritmo de ordenação utilizado} \\ \cline{2-4} 
+			& Merge            & Quick            & Heap            \\ \hline
+			10                                & 86               & 63               & 107             \\ \hline
+			100                               & 1575             & 852              & 2403            \\ \hline
+			1000                              & 21326            & 10674            & 38742           \\ \hline
+			10000                             & 286540           & 130830           & 538751          \\ \hline
+			100000                            & 3579266          & 1528554          & 6890311         \\ \hline
+			1000000                           & 41333947         & 17559420         & 83768004        \\ \hline
+		\end{tabular}
+	\end{table}
+	\begin{table}[H]
+		\centering
+		\caption{Tempo gasto - lista aleatória}
+		\label{LISTRO}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\multicolumn{4}{|c|}{Tempo gasto em segundos}                                             \\ \hline
+			\multirow{2}{*}{Tamanho da lista} & \multicolumn{3}{c|}{Algoritmo de ordenação utilizado} \\ \cline{2-4} 
+			& Merge            & Quick            & Heap            \\ \hline
+			10                                & 3,00E-06         & 1,80E-05         & 4,00E-06        \\ \hline
+			100                               & 1,30E-05         & 2,10E-05         & 4,00E-05        \\ \hline
+			1000                              & 0,000134         & 0,000248         & 0,000592        \\ \hline
+			10000                             & 0,001644         & 0,003233         & 0,00768         \\ \hline
+			100000                            & 0,01941          & 0,039624         & 0,106496        \\ \hline
+			1000000                           & 0,239133         & 0,470272         & 1,91489         \\ \hline
+		\end{tabular}
+	\end{table}
+	\begin{figure}[H]
+		\flushleft
+		\includegraphics{Charts/LROCOMP.png}
+		\caption{Comparações - Lista aleatória}
+		\label{Rotulo}
+	\end{figure}
+	\begin{figure}[H]
+		\flushleft
+		\includegraphics{Charts/LROATRIB.png}
+		\caption{Atribuições - Lista aleatória}
+		\label{Rotulo}
+	\end{figure}
+	\begin{figure}[H]
+		\flushleft
+		\includegraphics{Charts/LROTG.png}
+		\caption{Tempo gasto - Lista aleatória}
+		\label{Rotulo}
+	\end{figure}
+	\section{Conclusão}
+	
+	
+	~Escrever conclusão~
+	
+	
+	\end{document}
