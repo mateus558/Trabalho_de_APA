@@ -13,7 +13,7 @@
 #include <iostream>
 #include <stdlib.h>
 
-long long int comp = 0;	//Number of comparisons
+long long int comp = 0;		//Number of comparisons
 long long int atrib = 0;	//Number of attributions
 
 using namespace std;
@@ -34,44 +34,6 @@ void swap(Node v[], int a, int b){
 	atrib += 3;
 }
 
-/*!
-	Partition step of quick sort algorithm.
-
-	@param v is an c-like array.
-	@param low is the lowest position of the subarray.
-	@param high is the highest position of the subarray.
-	@return the pivot's position of the subarray.
-*/
-
-int partition(Node v[], int low, int high){
-	int i, j;
-	Node pivot = v[low];
-
-	i = low;
-	j = high;
-	while(i < j){
-		while(v[i].key <=pivot.key){
-			comp++;
-			atrib++;
-			i++;
-		}
-		while(v[j].key >pivot.key){
-			comp++;
-			atrib++;
-			j--;
-		}
-		if(i<j){
-	 		comp++;
-	 		swap(v, i, j);
-	 	}
-	}
-	v[low] = v[j];
-	v[j] = pivot;
-	atrib += 5;
-	return j;
-}
-
-
 /*!	Implementation of the quick sort algorithm
 
 	@param v is an c-like array.
@@ -80,15 +42,41 @@ int partition(Node v[], int low, int high){
 	@return there is no return.
 */
 
-void quick_sort(Node v[], int low, int high){
-	if(low<high){
-		comp++;
-		atrib++;
-		int pivot = partition(v, low, high);
-		quick_sort(v, low, (pivot-1));
-		quick_sort(v, (pivot+1), high);
+void quick_sort(Node v[], int low, int high)
+{
+	int pivot, aux;
+	int i, j;
+	pivot = v[(low + high) / 2].key;
+	i = low;
+	j = high;
+	atrib += 3;
+
+	while(i <= j)
+	{
+		while(v[i].key < pivot)
+		{
+			comp++;
+			i++;
+		}
+		while(v[j].key > pivot)
+		{
+			comp++;
+			j--;
+		}
+		if(i <= j)
+		{
+			comp++;
+			swap(v, i, j);
+			i++;
+			j--;
+		}
 	}
 
+	if(j > low)
+		quick_sort(v, low, j);
+
+	if(i < high)
+		quick_sort(v, j + 1, high);
 }
 
 /*!	Implementation of the merge sort algorithm
