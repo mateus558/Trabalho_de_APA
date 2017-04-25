@@ -5,5 +5,9 @@
 \contentsline {section}{\numberline {2}Algoritmo e estruturas de dados}{1}{section.2}
 \contentsline {section}{\numberline {3}An\'alise de complexidade dos algoritmos}{2}{section.3}
 \contentsline {subsection}{\numberline {3.1}An\'alise do Bubble Sort}{2}{subsection.3.1}
-\contentsline {section}{\numberline {4}Testes}{2}{section.4}
-\contentsline {section}{\numberline {5}Conclus\~ao}{3}{section.5}
+\contentsline {subsection}{\numberline {3.2}An\'alise do Insertion Sort}{3}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}An\'alise do Selection Sort}{4}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}An\'alise do Merge Sort}{4}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}An\'alise do Heap Sort}{4}{subsection.3.5}
+\contentsline {section}{\numberline {4}Testes}{5}{section.4}
+\contentsline {section}{\numberline {5}Conclus\~ao}{5}{section.5}

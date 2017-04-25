@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.23)  24 APR 2017 14:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.23)  24 APR 2017 16:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -69,6 +69,12 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks15
+\verbatim@line=\toks16
+\verbatim@in@stream=\read1
+)
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
@@ -93,12 +99,12 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutheight=\dimen111
 \Gm@layouthoffset=\dimen112
 \Gm@layoutvoffset=\dimen113
-\Gm@dimlist=\toks15
+\Gm@dimlist=\toks17
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks16
-\inpenc@posthook=\toks17
+\inpenc@prehook=\toks18
+\inpenc@posthook=\toks19
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
 File: latin1.def 2015/03/17 v1.2c Input encoding file
@@ -222,7 +228,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 (./listings.sty
 \lst@mode=\count102
 \lst@gtempboxa=\box26
-\lst@token=\toks18
+\lst@token=\toks20
 \lst@length=\count103
 \lst@currlwidth=\dimen118
 \lst@column=\count104
@@ -257,37 +263,52 @@ Package color Info: Driver file: pdftex.def on input line 147.
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 ) (./lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-) (./modelo.aux)
+) (./modelo.aux
+
+LaTeX Warning: Label `fig:exemplo' multiply defined.
+
+
+LaTeX Warning: Label `fig:exemplo' multiply defined.
+
+
+LaTeX Warning: Label `eq:notacao' multiply defined.
+
+
+LaTeX Warning: Label `fig:exemplo' multiply defined.
+
+
+LaTeX Warning: Label `fig:exemplo' multiply defined.
+
+)
 \openout1 = `modelo.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count110
 \scratchdimen=\dimen122
 \scratchbox=\box28
 \nofMPsegments=\count111
 \nofMParguments=\count112
-\everyMPshowfont=\toks19
+\everyMPshowfont=\toks21
 \MPscratchCnt=\count113
 \MPscratchDim=\dimen123
 \MPnumerator=\count114
 \makeMPintoPDFobject=\count115
-\everyMPtoPDFconversion=\toks20
+\everyMPtoPDFconversion=\toks22
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -340,7 +361,7 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring OFF on input line 35.
+Package hyperref Info: Link coloring OFF on input line 36.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -349,9 +370,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count116
 )
-LaTeX Info: Redefining \ref on input line 35.
-LaTeX Info: Redefining \pageref on input line 35.
-LaTeX Info: Redefining \nameref on input line 35.
+LaTeX Info: Redefining \ref on input line 36.
+LaTeX Info: Redefining \pageref on input line 36.
+LaTeX Info: Redefining \nameref on input line 36.
 
 (./modelo.out) (./modelo.out)
 \@outlinefile=\write3
@@ -359,9 +380,9 @@ LaTeX Info: Redefining \nameref on input line 35.
 
 \c@lstlisting=\count117
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 95.
+(babel)             in language  on input line 96.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 95.
+(babel)             in language  on input line 96.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./modelo.toc
@@ -388,30 +409,30 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout7 = `modelo.lot'.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 100.
+(babel)             in language  on input line 101.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 100.
+(babel)             in language  on input line 101.
  [2
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 103.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 107.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 110.
+(babel)             in language  on input line 108.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 111.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 110.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 111.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 115.
+(babel)             in language  on input line 116.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 121.
+(babel)             in language  on input line 122.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 127.
+nput line 128.
  (./programa.c
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 3.
@@ -421,69 +442,114 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 5.
 )
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 130.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 132.
+(babel)             in language  on input line 131.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 133.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 133.
+(babel)             in language  on input line 134.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 134.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.133 ...ue não sejam mais necessárias trocas.\par
+l.134 ...ue não sejam mais necessárias trocas.\par
                                                    [1]
-<bubblepass.png, id=108, 261.1356pt x 239.9364pt>
+<bubblepass.png, id=134, 261.1356pt x 239.9364pt>
 File: bubblepass.png Graphic file (type png)
  <use bubblepass.png>
-Package pdftex.def Info: bubblepass.png used on input line 137.
+Package pdftex.def Info: bubblepass.png used on input line 138.
 (pdftex.def)             Requested size: 142.26378pt x 130.71698pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 176.
+(babel)             in language  on input line 151.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 190.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 194.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 194.
+(babel)             in language  on input line 151.
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.194 M
-       uito dos algoritmos são extraídos de:\cite{ziviani:2004}. [2 <./bubblepa
-ss.png>] (./modelo.bbl
+l.151 \newpage
+               [2 <./bubblepass.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 152.
+
+<insertion.jpg, id=147, 301.125pt x 257.96375pt>
+File: insertion.jpg Graphic file (type jpg)
+ <use insertion.jpg>
+Package pdftex.def Info: insertion.jpg used on input line 155.
+(pdftex.def)             Requested size: 142.26378pt x 121.8767pt.
+
+<insertion-sort.png, id=148, 427.5975pt x 310.91156pt>
+File: insertion-sort.png Graphic file (type png)
+
+<use insertion-sort.png>
+Package pdftex.def Info: insertion-sort.png used on input line 163.
+(pdftex.def)             Requested size: 142.26378pt x 103.44083pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 179.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 179.
+ [3 <./insertion.jpg> <./insertion-sort.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 180.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 191.
+
+<merge.png, id=156, 229.85875pt x 220.825pt>
+File: merge.png Graphic file (type png)
+ <use merge.png>
+Package pdftex.def Info: merge.png used on input line 196.
+(pdftex.def)             Requested size: 142.26378pt x 136.68094pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 210.
+
+<heap.jpg, id=158, 366.61969pt x 464.4853pt>
+File: heap.jpg Graphic file (type jpg)
+ <use heap.jpg>
+Package pdftex.def Info: heap.jpg used on input line 215.
+(pdftex.def)             Requested size: 142.26378pt x 180.24135pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 227.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 227.
+ [4 <./merge.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 256.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 270.
+
+(./modelo.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 13.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ))
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 199.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 279.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 199.
+(babel)             in language  on input line 279.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 199.
- [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 199.
+(babel)             in language  on input line 279.
+
+[5 <./heap.jpg>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 279.
  (./modelo.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 199.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 199.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 279.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 279.
 Package rerunfilecheck Info: File `modelo.out' has not changed.
-(rerunfilecheck)             Checksum: 97030A953E06BB155FBFCDE9F3ED3171;512.
+(rerunfilecheck)             Checksum: E244007114A93A792C86144124249278;814.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 199.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 279.
  ) 
 Here is how much of TeX's memory you used:
- 8092 strings out of 494884
- 115135 string characters out of 6179236
- 286871 words of memory out of 5000000
- 11240 multiletter control sequences out of 15000+600000
+ 8157 strings out of 494884
+ 116131 string characters out of 6179236
+ 287502 words of memory out of 5000000
+ 11286 multiletter control sequences out of 15000+600000
  15756 words of font info for 36 fonts, out of 8000000 for 9000
  38 hyphenation exceptions out of 8191
- 30i,8n,49p,319b,1197s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,7n,49p,446b,1197s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/mateus558/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200
 .600pk> </home/mateus558/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/ec/ect
 i1200.600pk> </home/mateus558/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/e
@@ -505,10 +571,10 @@ fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy8.pfb>
-Output written on modelo.pdf (5 pages, 221523 bytes).
+Output written on modelo.pdf (7 pages, 303168 bytes).
 PDF statistics:
- 575 PDF objects out of 1000 (max. 8388607)
- 192 compressed objects within 2 object streams
- 49 named destinations out of 1000 (max. 500000)
- 70 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 634 PDF objects out of 1000 (max. 8388607)
+ 234 compressed objects within 3 object streams
+ 61 named destinations out of 1000 (max. 500000)
+ 122 words of extra memory for PDF output out of 10000 (max. 10000000)
 
